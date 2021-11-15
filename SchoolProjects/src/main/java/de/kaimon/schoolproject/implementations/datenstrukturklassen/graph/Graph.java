@@ -1,6 +1,6 @@
 package de.kaimon.schoolproject.implementations.datenstrukturklassen.graph;
 
-import de.simon.info.implementations.datenstrukturklassen.linear.List;
+import de.kaimon.schoolproject.implementations.datenstrukturklassen.linear.List;
 
 /**
  * <p>

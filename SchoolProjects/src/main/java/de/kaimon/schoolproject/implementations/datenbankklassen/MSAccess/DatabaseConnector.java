@@ -1,6 +1,6 @@
 package de.kaimon.schoolproject.implementations.datenbankklassen.MSAccess;
 
-import de.simon.info.implementations.datenstrukturklassen.linear.Queue;
+import de.kaimon.schoolproject.implementations.datenstrukturklassen.linear.Queue;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
