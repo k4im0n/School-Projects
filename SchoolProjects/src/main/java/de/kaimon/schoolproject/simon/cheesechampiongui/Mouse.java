@@ -1,6 +1,5 @@
-package de.kaimon.schoolproject.simon.cheesechampion;
+package de.kaimon.schoolproject.simon.cheesechampiongui;
 
-import sas.Sprite;
 import sas.Tools;
 
 public class Mouse {
@@ -15,7 +14,7 @@ public class Mouse {
         this.strenght = strenght;
     }
 
-    public
+    public 
 
     public int getStrenght() {
         return strenght;

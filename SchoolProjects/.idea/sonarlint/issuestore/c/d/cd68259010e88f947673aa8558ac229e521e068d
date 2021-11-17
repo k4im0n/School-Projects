@@ -1,0 +1,8 @@
+
+e
+java:S1172'"ORemove these unused method parameters "pIP", "pPort", "pUsername", "pPassword".(œ„´‹
+o
+java:S2293X"YReplace the type specification in this constructor call with the diamond operator ("<>").(“–²ß
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º¤Â€úÿÿÿÿ
+b
+java:S2095D"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµþÿÿÿÿ

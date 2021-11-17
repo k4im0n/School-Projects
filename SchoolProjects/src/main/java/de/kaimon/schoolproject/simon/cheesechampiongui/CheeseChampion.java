@@ -1,4 +1,4 @@
-package de.kaimon.schoolproject.simon.cheesechampion;
+package de.kaimon.schoolproject.simon.cheesechampiongui;
 
 import de.kaimon.schoolproject.implementations.datenstrukturklassen.linear.Queue;
 import de.kaimon.schoolproject.implementations.datenstrukturklassen.linear.Stack;
@@ -69,6 +69,12 @@ public class CheeseChampion {
             press.push(input.front());
             input.dequeue();
         }
+    }
+
+    private Mouse[] fight(Mouse mouse1, Mouse mouse2) {
+        if (mouse1.getStrenght() > mouse2.getStrenght())
+            return new Mouse[]{mouse1, mouse2};
+        else return new Mouse[]{mouse2, mouse1};
     }
 
     public Queue<Mouse> getOutput() {
