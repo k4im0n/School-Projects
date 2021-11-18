@@ -1,8 +1,0 @@
-
-H
-java:S4925*"-Remove this "Class.forName()", it is useless.(¹µÖÁüÿÿÿÿ
-o
-java:S2293V"YReplace the type specification in this constructor call with the diamond operator ("<>").(“–²ß
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(öì
-b
-java:S2095B"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ
