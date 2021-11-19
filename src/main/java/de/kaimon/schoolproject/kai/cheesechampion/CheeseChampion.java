@@ -8,15 +8,12 @@ public class CheeseChampion {
     private Queue<Mouse> start = new Queue<>();
     private Queue<Mouse> end = new Queue<>();
     private Queue<Mouse> center = new Queue<>();
-    private GUI gui;
 
     public CheeseChampion() {
         int mice = Tools.randomNumber(3,9);
         for (int i = 0; i < mice; i++) {
             start.enqueue(new Mouse(i+1));
         }
-
-        gui = new GUI(start, mice);
 
         while (!start.isEmpty()){
             if(center.isEmpty()){
