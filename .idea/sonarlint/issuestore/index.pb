@@ -1,6 +1,4 @@
 
-s
-Csrc/main/java/de/kaimon/schoolproject/simon/SchoolProjectSimon.java,6\e\6e04a2d9bd177c5765792ae9d26892cf27a58fe8
 u
 Esrc/main/java/de/kaimon/schoolproject/simon/cheesechampion/Mouse.java,7\f\7f3435079376317c750390c110db1705897265fb
 v
@@ -37,11 +35,5 @@ dsrc/main/java/de/kaimon/schoolproject/implementations/datenbankklassen/SQLite/D
 \src/main/java/de/kaimon/schoolproject/implementations/datenstrukturklassen/linear/Queue.java,a\1\a1a8a74e36701bd9e8cf0b8bcebb81cd92b7cd61
 Œ
 \src/main/java/de/kaimon/schoolproject/implementations/datenstrukturklassen/linear/Stack.java,9\b\9bb732b5e4c9a9b718164bed0b7b70ee02dbb501
-o
-?src/main/java/de/kaimon/schoolproject/kai/SchoolProjectKai.java,4\3\438687ca38c340da9649bc7509f5f3dfaaac6eac
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-i
-9src/main/java/de/kaimon/schoolproject/kai/Mice/Mouse.java,6\1\61adb1d6a05c4ee389e88df5c001726a33ee22cd
-i
-9src/main/java/de/kaimon/schoolproject/kai/Mice/Start.java,f\a\fac6454dc69e7ec32c48389cd390d6fa536df559

@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="School-Projects:jar">
+    <output-path>$USER_HOME$/Desktop</output-path>
+    <root id="archive" name="School-Projects.jar">
+      <element id="module-output" name="School-Projects" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/main/resources/sasRetina_java8.jar" path-in-jar="/" />
+      <element id="library" level="project" name="sasRetina_java8" />
+    </root>
+  </artifact>
+</component>
