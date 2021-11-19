@@ -1,6 +1,6 @@
 package de.kaimon.schoolproject.kai;
 
-import de.kaimon.schoolproject.kai.cheesechampion.CheeseChampion;
+import de.kaimon.schoolproject.kai.cheesechampionlaledition.CheeseChampion;
 
 public class SchoolProjectKai {
 
