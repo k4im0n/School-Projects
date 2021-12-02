@@ -118,7 +118,6 @@ public class CheeseChampion {
         int i = 0;
         while (!end.isEmpty()) {
             end.front().getMaus().moveTo(20 + i,20);
-            System.out.println(end.front().getName() + " " + end.front().getStrenght());
             end.dequeue();
             i = i + 80;
         }
