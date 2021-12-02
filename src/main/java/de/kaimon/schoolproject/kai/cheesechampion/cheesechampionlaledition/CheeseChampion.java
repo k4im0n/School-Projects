@@ -1,4 +1,4 @@
-package de.kaimon.schoolproject.kai.cheesechampionlaledition;
+package de.kaimon.schoolproject.kai.cheesechampion.cheesechampionlaledition;
 
 import de.kaimon.schoolproject.implementations.datenstrukturklassen.linear.Queue;
 import org.jetbrains.annotations.NotNull;

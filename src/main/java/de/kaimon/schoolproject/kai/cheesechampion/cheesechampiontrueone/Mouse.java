@@ -1,4 +1,4 @@
-package de.kaimon.schoolproject.kai.cheesechampionlaledition;
+package de.kaimon.schoolproject.kai.cheesechampion.cheesechampiontrueone;
 
 import sas.Circle;
 import sas.Sprite;
@@ -11,13 +11,19 @@ public class Mouse {
 
     private int strenght;
     private int nummber;
-    private Sprite mouse;
+    private Sprite maus;
 
-    public Mouse(double x, double y) {
+    public Mouse(int nummber) {
         strenght = Tools.randomNumber(1,10);
         this.nummber = nummber;
-        mouse = new Sprite(new Circle(x,y,20, new Color(100,70,50)));
-        mouse.add(new Text(x + 15, y, "" + strenght));
+        maus = new Sprite();
+        maus.add(new Circle(-100, 235,25, Color.GRAY));
+        maus.add(new Text(-90,270,"Nr. " + nummber));
+        maus.add(new Text(-90,240,"S: " + strenght));
+    }
+
+    public Sprite getMaus() {
+        return maus;
     }
 
     public String getName(){
@@ -30,9 +36,5 @@ public class Mouse {
 
     public int getNummber() {
         return nummber;
-    }
-
-    public Sprite getMouse() {
-        return mouse;
     }
 }

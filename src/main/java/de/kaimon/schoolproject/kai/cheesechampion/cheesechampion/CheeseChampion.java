@@ -1,4 +1,4 @@
-package de.kaimon.schoolproject.kai.cheesechampion;
+package de.kaimon.schoolproject.kai.cheesechampion.cheesechampion;
 
 import de.kaimon.schoolproject.implementations.datenstrukturklassen.linear.Queue;
 import sas.Tools;
