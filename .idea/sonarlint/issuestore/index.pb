@@ -59,3 +59,11 @@ f
 6src/main/java/de/kaimon/schoolproject/kai/Meldung.java,7\e\7eca0c02ae6cbf649fdf16538376d8f39b9d5692
 o
 ?src/main/java/de/kaimon/schoolproject/kai/VerwaltungsListe.java,e\0\e0f580fa47d55b931c83aed5fccb65831c0b413e
+o
+?src/main/java/de/kaimon/schoolproject/kai/SchoolProjectKai.java,4\3\438687ca38c340da9649bc7509f5f3dfaaac6eac
+–
+fsrc/main/java/de/kaimon/schoolproject/implementations/datenstrukturklassen/baum/ComparableContent.java,a\d\ad691d3ad075ed340838b94d5f1ec297fcfd1684
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+•
+esrc/main/java/de/kaimon/schoolproject/implementations/datenstrukturklassen/baum/BinarySearchTree.java,f\5\f5f01fc3513f1746a58e95cc095bc43419616afc
