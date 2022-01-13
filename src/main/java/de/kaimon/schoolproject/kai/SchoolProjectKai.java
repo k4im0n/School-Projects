@@ -25,28 +25,40 @@ public class SchoolProjectKai {
             System.out.println("fak für Fakultät");
             System.out.println("fib für Fibonachi");
             System.out.println("lol für lol");
-
+            System.out.println("btt für binarytree traversion");
             System.out.print("Ihre Wahl: ");
 
 
 
             String input = reader.readLine();
-            if (input.equals("cle"))
-                new de.kaimon.schoolproject.kai.cheesechampion.cheesechampionlaledition.CheeseChampion();
-            else if (input.equals("cto"))
-                new de.kaimon.schoolproject.kai.cheesechampion.cheesechampiontrueone.CheeseChampion();
-            else if (input.equals("cc"))
-                new de.kaimon.schoolproject.kai.cheesechampion.cheesechampion.CheeseChampion();
-            else if (input.equals("fak")) {
-                System.out.print("Fakultät Zahl: ");
-                new de.kaimon.schoolproject.kai.fackultät.FackUltät(Integer.parseInt(reader.readLine()));
-            } else if (input.equals("fib")) {
-                System.out.print("Fibonachi Zahl: ");
-                new de.kaimon.schoolproject.kai.fibonachi.Fibonachi(Integer.parseInt(reader.readLine()));
-            } else if (input.equals("lol")){
-                new de.kaimon.schoolproject.kai.lol.Lol();
-            }else if(input.equals("exit")) {
-                exit = false;
+            switch (input) {
+                case "cle":
+                    new de.kaimon.schoolproject.kai.cheesechampion.cheesechampionlaledition.CheeseChampion();
+                    break;
+                case "cto":
+                    new de.kaimon.schoolproject.kai.cheesechampion.cheesechampiontrueone.CheeseChampion();
+                    break;
+                case "cc":
+                    new de.kaimon.schoolproject.kai.cheesechampion.cheesechampion.CheeseChampion();
+                    break;
+                case "fak":
+                    System.out.print("Fakultät Zahl: ");
+                    new de.kaimon.schoolproject.kai.fackultät.FackUltät(Integer.parseInt(reader.readLine()));
+                    break;
+                case "fib":
+                    System.out.print("Fibonachi Zahl: ");
+                    new de.kaimon.schoolproject.kai.fibonachi.Fibonachi(Integer.parseInt(reader.readLine()));
+                    break;
+                case "lol":
+                    new de.kaimon.schoolproject.kai.lol.Lol();
+                    break;
+                case "btt":
+                    new de.kaimon.schoolproject.kai.treetraversionen.Traversion();
+                case "exit":
+                    exit = false;
+                    break;
+                default:
+                    System.out.println("bitte eine gültige eingabe");
             }
         }
     }
