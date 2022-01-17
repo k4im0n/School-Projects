@@ -1,7 +1,6 @@
-package de.kaimon.schoolproject.kai.treetraversionen;
+package de.kaimon.schoolproject.kai.trees.treetraversionen;
 
 import de.kaimon.schoolproject.implementations.datenstrukturklassen.baum.BinaryTree;
-import org.jetbrains.annotations.Nullable;
 
 public class Traversion {
 

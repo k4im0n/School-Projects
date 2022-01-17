@@ -1,10 +1,5 @@
 package de.kaimon.schoolproject.kai;
 
-import de.kaimon.schoolproject.kai.cheesechampion.cheesechampiontrueone.CheeseChampion;
-import de.kaimon.schoolproject.kai.fackultät.FackUltät;
-import de.kaimon.schoolproject.kai.fibonachi.Fibonachi;
-import de.kaimon.schoolproject.kai.fibonachi.FindFibonachi;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -25,6 +20,7 @@ public class SchoolProjectKai {
             System.out.println("fib für Fibonachi");
             System.out.println("lol für lol");
             System.out.println("btt für binarytree traversion");
+            System.out.println("moc für MorseConverter");
             System.out.print("Ihre Wahl: ");
 
 
@@ -52,7 +48,9 @@ public class SchoolProjectKai {
                     new de.kaimon.schoolproject.kai.lol.Lol();
                     break;
                 case "btt":
-                    new de.kaimon.schoolproject.kai.treetraversionen.Traversion();
+                    new de.kaimon.schoolproject.kai.trees.treetraversionen.Traversion();
+                case "moc":
+                    new de.kaimon.schoolproject.kai.trees.morseconverter.MorseConverter();
                 case "exit":
                     exit = false;
                     break;

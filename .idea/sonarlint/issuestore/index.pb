@@ -61,3 +61,17 @@ o
 fsrc/main/java/de/kaimon/schoolproject/implementations/datenstrukturklassen/baum/ComparableContent.java,a\d\ad691d3ad075ed340838b94d5f1ec297fcfd1684
 ï
 esrc/main/java/de/kaimon/schoolproject/implementations/datenstrukturklassen/baum/BinarySearchTree.java,f\5\f5f01fc3513f1746a58e95cc095bc43419616afc
+è
+_src/main/java/de/kaimon/schoolproject/implementations/datenstrukturklassen/baum/BinaryTree.java,f\5\f5bb2a6f0d65f6cf84dd7e8dfa099219db4a30e9
+í
+bsrc/main/java/de/kaimon/schoolproject/kai/cheesechampion/cheesechampiontrueone/CheeseChampion.java,c\4\c4553541f63835cc7736d3f47c9b02fd11888288
+s
+Csrc/main/java/de/kaimon/schoolproject/simon/SchoolProjectSimon.java,6\e\6e04a2d9bd177c5765792ae9d26892cf27a58fe8
+Å
+Qsrc/main/java/de/kaimon/schoolproject/kai/trees/treetraversionen/TreeViewGUI.java,d\6\d6aca1c7972908d41dcafee42b80b0c52d82bbee
+~
+Nsrc/main/java/de/kaimon/schoolproject/kai/trees/treetraversionen/TreeView.java,c\a\ca94b0e3b19de91f68c5ab2f0fd73695f9d06ae6
+ê
+`src/main/java/de/kaimon/schoolproject/implementations/datenstrukturklassen/baum/TreeViewGUI.java,7\2\72126d6ddd7b992fafa20356257d7c27dc4d846f
+ç
+]src/main/java/de/kaimon/schoolproject/implementations/datenstrukturklassen/baum/TreeView.java,e\5\e5d69bfc58e529ed9e3d5938a14abc36efdc29e7
