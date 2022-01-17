@@ -13,7 +13,6 @@ public class SchoolProjectKai {
 
     public static void main(String[] args) throws IOException {
 
-        new FindFibonachi(8);
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         boolean exit = true;
         while (exit){

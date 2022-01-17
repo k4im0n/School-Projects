@@ -37,8 +37,6 @@ Rsrc/main/java/de/kaimon/schoolproject/kai/cheesechampion/cheesechampion/Mouse.j
 [src/main/java/de/kaimon/schoolproject/kai/cheesechampion/cheesechampion/CheeseChampion.java,b\3\b34952d03c1045ee1322750947845ab05f5f11f8
 ï
 esrc/main/java/de/kaimon/schoolproject/kai/cheesechampion/cheesechampionlaledition/CheeseChampion.java,4\2\42ccce23d431b58e555751c4bf0d69ba5e2503f6
-í
-bsrc/main/java/de/kaimon/schoolproject/kai/cheesechampion/cheesechampiontrueone/CheeseChampion.java,c\4\c4553541f63835cc7736d3f47c9b02fd11888288
 â
 Ysrc/main/java/de/kaimon/schoolproject/kai/cheesechampion/cheesechampiontrueone/Mouse.java,6\0\60fdb13bae80248f36ca4fb59bdccd2acdb1215a
 Å
@@ -61,7 +59,5 @@ o
 ?src/main/java/de/kaimon/schoolproject/kai/VerwaltungsListe.java,e\0\e0f580fa47d55b931c83aed5fccb65831c0b413e
 ñ
 fsrc/main/java/de/kaimon/schoolproject/implementations/datenstrukturklassen/baum/ComparableContent.java,a\d\ad691d3ad075ed340838b94d5f1ec297fcfd1684
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 ï
 esrc/main/java/de/kaimon/schoolproject/implementations/datenstrukturklassen/baum/BinarySearchTree.java,f\5\f5f01fc3513f1746a58e95cc095bc43419616afc

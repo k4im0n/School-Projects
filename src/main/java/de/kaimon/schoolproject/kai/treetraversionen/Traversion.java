@@ -1,66 +1,106 @@
 package de.kaimon.schoolproject.kai.treetraversionen;
 
 import de.kaimon.schoolproject.implementations.datenstrukturklassen.baum.BinaryTree;
+import org.jetbrains.annotations.Nullable;
 
 public class Traversion {
 
     private BinaryTree<Integer> nummberTree;
+    private String post = "LRW: ";
+    private String pre = "WLR: ";
+    private String in = "LWR: ";
 
     public Traversion(){
-        fillTree();
+        fillTree(new int[]{5, 13, 10, 18, 30, 20, 15, 36, 39, 38, 49, 55, 51, 47, 33});
+        System.out.println("");
+        System.out.println(outputPostorderLRW(nummberTree) + " Postorder");
+        System.out.println(outputPreorderWLR(nummberTree) + " Preorder");
+        System.out.println(outputInorderLWR(nummberTree) + " Inorder");
         new TreeViewGUI(nummberTree);
-        System.out.println("----Postorder----");
-        outputPostorderLRW(nummberTree);
-        System.out.println("----Preorder----");
-        outputPreorderWLR(nummberTree);
-        System.out.println("----Inorder----");
-        outputInorderLWR(nummberTree);
     }
 
-    private void outputPostorderLRW(BinaryTree<Integer> tree){
-        if(tree.isEmpty()) return;
+    private String outputPostorderLRW(BinaryTree<Integer> tree){
+        if(tree.isEmpty()) return post;
         if(!tree.getLeftTree().isEmpty()) outputPostorderLRW(tree.getLeftTree());
         if(!tree.getRightTree().isEmpty()) outputPostorderLRW(tree.getRightTree());
-        System.out.println(tree.getContent());
+        post = post + " " + tree.getContent();
+        return post;
     }
 
-    private void outputPreorderWLR(BinaryTree tree){
-        if(tree.isEmpty()) return;
-        System.out.println(tree.getContent());
+    private String outputPreorderWLR(BinaryTree<Integer> tree){
+        if(tree.isEmpty()) return pre;
+        pre = pre + " " + tree.getContent();
         if(!tree.getLeftTree().isEmpty()) outputPreorderWLR(tree.getLeftTree());
         if(!tree.getRightTree().isEmpty()) outputPreorderWLR(tree.getRightTree());
+        return pre;
     }
 
-    private void outputInorderLWR(BinaryTree tree){
-        if(tree.isEmpty()) return;
+    private String outputInorderLWR(BinaryTree<Integer> tree){
+        if(tree.isEmpty()) return in;
         if(!tree.getLeftTree().isEmpty()) outputInorderLWR(tree.getLeftTree());
-        System.out.println(tree.getContent());
+        in = in + " " + tree.getContent();
         if(!tree.getRightTree().isEmpty()) outputInorderLWR(tree.getRightTree());
+        return in;
     }
 
-    private BinaryTree fillTree(){
-        BinaryTree<Integer> binaryTr10 = new BinaryTree<>(10);
-        binaryTr10.setLeftTree(new BinaryTree<>(5));
-        BinaryTree<Integer> binaryTr18 = new BinaryTree<>(18);
-        BinaryTree<Integer> binaryTr20 = new BinaryTree<>(20);
-        binaryTr20.setLeftTree(binaryTr18);
-        BinaryTree<Integer> binaryTr36 = new BinaryTree<>(36);
-        BinaryTree<Integer> binaryTr39 = new BinaryTree<>(39);
-        BinaryTree<Integer> binaryTr2 = new BinaryTree<>(38);
-        binaryTr2.setLeftTree(binaryTr36);
-        binaryTr2.setRightTree(binaryTr39);
-        BinaryTree<Integer> binaryTr49 = new BinaryTree<>(49);
-        BinaryTree<Integer> binaryTr51 = new BinaryTree<>(51);
-        binaryTr51.setLeftTree(binaryTr49);
-        BinaryTree<Integer> binaryTr15 = new BinaryTree<>(15);
-        binaryTr15.setLeftTree(binaryTr10);
-        binaryTr15.setRightTree(binaryTr20);
-        BinaryTree<Integer> binaryTr47 = new BinaryTree<>(47);
-        binaryTr47.setLeftTree(binaryTr2);
-        binaryTr47.setRightTree(binaryTr51);
-        nummberTree = new BinaryTree<>(33);
-        nummberTree.setLeftTree(binaryTr15);
-        nummberTree.setRightTree(binaryTr47);
-        return nummberTree;
+    private void fillTree(int[] post){
+        BinaryTree<Integer> treeL;
+        BinaryTree<Integer> treeR;
+        if(post[14] == 9898) return;
+        nummberTree = new BinaryTree<>(post[14]);
+        if(post[7] != 9898){
+            treeL = new BinaryTree<>(post[6]);
+            if(post[2] != 9898){
+                BinaryTree<Integer> treeLL = new BinaryTree<>(post[2]);
+                if(post[0] != 9898) treeLL.setLeftTree(new BinaryTree<>(post[0]));
+                if(post[1] != 9898) treeLL.setRightTree(new BinaryTree<>(post[1]));
+                treeL.setLeftTree(treeLL);
+            }
+            if(post[5] != 9898){
+                BinaryTree<Integer> treeLR = new BinaryTree<>(post[5]);
+                if(post[3] != 9898) treeLR.setLeftTree(new BinaryTree<>(post[3]));
+                if(post[4] != 9898) treeLR.setRightTree(new BinaryTree<>(post[4]));
+                treeL.setRightTree(treeLR);
+            }
+            nummberTree.setLeftTree(treeL);
+        }
+        if(post[13] != 9898){
+            treeR = new BinaryTree<>(post[13]);
+            if(post[10] != 9898){
+                BinaryTree<Integer> treeRL = new BinaryTree<>(post[9]);
+                if(post[8] != 9898) treeRL.setLeftTree(new BinaryTree<>(post[7]));
+                if(post[9] != 9898) treeRL.setRightTree(new BinaryTree<>(post[8]));
+                treeR.setLeftTree(treeRL);
+            }
+            if(post[12] != 9898) {
+                BinaryTree<Integer> treeRR = new BinaryTree<>(post[12]);
+                if(post[11] != 9898) treeRR.setLeftTree(new BinaryTree<>(post[10]));
+                if(post[12] != 9898) treeRR.setRightTree(new BinaryTree<>(post[11]));
+                treeR.setRightTree(treeRR);
+            }
+            nummberTree.setRightTree(treeR);
+        }
+        /*
+        System.out.println(
+                "\t\t\t\t\t\t\t" +
+                nummberTree.getContent());
+        System.out.println(
+                "\t\t\t"+
+                nummberTree.getLeftTree().getContent() +"\t\t\t\t\t\t\t\t" + nummberTree.getRightTree().getContent());
+        System.out.println("\t"+
+                nummberTree.getLeftTree().getLeftTree().getContent() +"\t\t\t\t"+
+                nummberTree.getLeftTree().getRightTree().getContent() +"\t\t\t\t"+
+                nummberTree.getRightTree().getLeftTree().getContent() +"\t\t\t\t" +
+                nummberTree.getRightTree().getRightTree().getContent());
+        System.out.println(
+                nummberTree.getLeftTree().getLeftTree().getLeftTree().getContent() + "\t\t" +
+                nummberTree.getLeftTree().getLeftTree().getRightTree().getContent() + "\t\t" +
+                nummberTree.getLeftTree().getRightTree().getLeftTree().getContent() + "\t\t" +
+                nummberTree.getLeftTree().getRightTree().getRightTree().getContent() + "\t\t" +
+                nummberTree.getRightTree().getLeftTree().getLeftTree().getContent() + "\t\t" +
+                nummberTree.getRightTree().getLeftTree().getRightTree().getContent() + "\t\t" +
+                nummberTree.getRightTree().getRightTree().getLeftTree().getContent() + "\t\t" +
+                nummberTree.getRightTree().getRightTree().getRightTree().getContent());
+         */
     }
 }
