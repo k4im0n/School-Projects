@@ -10,9 +10,9 @@ import java.awt.*;
 
 public class CheeseChampion {
 
-    private View view;
-    private Rectangle border;
-    private Rectangle background;
+    private View view = new View(620,420);
+    private Rectangle border = new Rectangle(0,0,620,420,Color.BLUE);
+    private Rectangle background  = new Rectangle(10,10,600,400, Color.BLACK);
     private Polygon way;
     private int[] winPos = new int[2];
     private Queue<Mouse> start = new Queue<>();
@@ -22,9 +22,6 @@ public class CheeseChampion {
     public CheeseChampion() {
         winPos[0] = 400;
         winPos[1] = 235;
-        view = new View(620,420);
-        border = new Rectangle(0,0,620,420,Color.BLUE);
-        background = new Rectangle(10,10,600,400, Color.BLACK);
         way = new Polygon(10,210, Color.WHITE);
         way.add(-11,0);
         way.add(-11,100);
@@ -118,7 +115,6 @@ public class CheeseChampion {
         int i = 0;
         while (!end.isEmpty()) {
             end.front().getMaus().moveTo(20 + i,20);
-            System.out.println(end.front().getName() + " " + end.front().getStrenght());
             end.dequeue();
             i = i + 80;
         }

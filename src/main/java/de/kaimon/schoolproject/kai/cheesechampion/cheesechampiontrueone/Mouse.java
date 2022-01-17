@@ -18,7 +18,7 @@ public class Mouse {
         this.nummber = nummber;
         maus = new Sprite();
         maus.add(new Circle(-100, 235,25, Color.GRAY));
-        maus.add(new Text(-90,270,"Nr. " + nummber));
+        maus.add(new Text(-90,270,"Nr. " + nummber, Color.DARK_GRAY));
         maus.add(new Text(-90,240,"S: " + strenght));
     }
 
