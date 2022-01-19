@@ -1,5 +1,7 @@
 package de.kaimon.schoolproject.kai;
 
+import de.kaimon.schoolproject.kai.trees.morseconverter.BinaryConverter;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -50,7 +52,7 @@ public class SchoolProjectKai {
                 case "btt":
                     new de.kaimon.schoolproject.kai.trees.treetraversionen.Traversion();
                 case "moc":
-                    new de.kaimon.schoolproject.kai.trees.morseconverter.MorseConverter();
+                    new BinaryConverter();
                 case "exit":
                     exit = false;
                     break;

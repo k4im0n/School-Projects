@@ -19,6 +19,7 @@ public class Lol {
         background = new Rectangle(10,10,580,380, Color.WHITE);
         bottom = new Rectangle(0,380,600,200,Color.GRAY);
         player = new Sprite(new Circle(50,100, 20, Color.RED));
+        player.moveTo(100,100);
         boolean game = true;
         double a = 4.81;
         double v = 0;
