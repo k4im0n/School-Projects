@@ -41,8 +41,6 @@ esrc/main/java/de/kaimon/schoolproject/kai/cheesechampion/cheesechampionlalediti
 Ysrc/main/java/de/kaimon/schoolproject/kai/cheesechampion/cheesechampiontrueone/Mouse.java,6\0\60fdb13bae80248f36ca4fb59bdccd2acdb1215a
 �
 Qsrc/main/java/de/kaimon/schoolproject/simon/cheesechampiongui/CheeseChampion.java,7\e\7e75064f2c41bda5cf4444844dac5ed40f46fbfd
-f
-6src/main/java/de/kaimon/schoolproject/kai/lol/Lol.java,1\4\14a9ae4f8dd7bdb0f0d30bc4b94bca6e84a003d2
 t
 Dsrc/main/java/de/kaimon/schoolproject/kai/fackultät/FackUltät.java,1\2\1243a1d2318d15fcc746e269eedc18c0a6f6c3ec
 r
