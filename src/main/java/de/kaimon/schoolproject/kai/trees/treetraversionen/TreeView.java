@@ -1,4 +1,4 @@
-package de.kaimon.schoolproject.kai.treetraversionen;
+package de.kaimon.schoolproject.kai.trees.treetraversionen;
 import de.kaimon.schoolproject.implementations.datenstrukturklassen.baum.BinaryTree;
 
 import java.awt.Canvas;

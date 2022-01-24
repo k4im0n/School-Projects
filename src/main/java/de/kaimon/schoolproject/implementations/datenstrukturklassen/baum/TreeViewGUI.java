@@ -1,9 +1,8 @@
-package de.kaimon.schoolproject.kai.treetraversionen;
-import de.kaimon.schoolproject.implementations.datenstrukturklassen.baum.BinaryTree;
+package de.kaimon.schoolproject.implementations.datenstrukturklassen.baum;
 
-import javax.swing.JFrame;
-import java.awt.event.MouseListener;
+import javax.swing.*;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 
 public class TreeViewGUI extends JFrame implements MouseListener

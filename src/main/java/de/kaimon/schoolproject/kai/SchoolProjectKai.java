@@ -1,9 +1,6 @@
 package de.kaimon.schoolproject.kai;
 
-import de.kaimon.schoolproject.kai.cheesechampion.cheesechampiontrueone.CheeseChampion;
-import de.kaimon.schoolproject.kai.fackultät.FackUltät;
-import de.kaimon.schoolproject.kai.fibonachi.Fibonachi;
-import de.kaimon.schoolproject.kai.fibonachi.FindFibonachi;
+import de.kaimon.schoolproject.kai.trees.treeconverter.MorseConverter;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,15 +14,19 @@ public class SchoolProjectKai {
         boolean exit = true;
         while (exit){
 
-            System.out.println("exit zum beenden");
-            System.out.println("cle für CheeseChampionLalEdition");
-            System.out.println("cto für CheeseChampionTrueOne");
-            System.out.println("cc für CheeseChampion");
-            System.out.println("fak für Fakultät");
-            System.out.println("fib für Fibonachi");
-            System.out.println("lol für lol");
-            System.out.println("btt für binarytree traversion");
-            System.out.print("Ihre Wahl: ");
+            System.out.print("""
+                exit zum beenden
+                cle für CheeseChampionLalEdition
+                cto für CheeseChampionTrueOne
+                cc für CheeseChampion
+                fak für Fakultät
+                fib für Fibonachi
+                lol für lol
+                btt für binarytree traversion
+                moc für MorseConverter
+                btc für BynaryConverter
+                Ihre Wahl: """
+            );
 
 
 
@@ -52,7 +53,11 @@ public class SchoolProjectKai {
                     new de.kaimon.schoolproject.kai.lol.Lol();
                     break;
                 case "btt":
-                    new de.kaimon.schoolproject.kai.treetraversionen.Traversion();
+                    new de.kaimon.schoolproject.kai.trees.treetraversionen.Traversion();
+                case "moc":
+                    new MorseConverter();
+                case "btc":
+                    new de.kaimon.schoolproject.kai.trees.treeconverter.BinaryConverter();
                 case "exit":
                     exit = false;
                     break;

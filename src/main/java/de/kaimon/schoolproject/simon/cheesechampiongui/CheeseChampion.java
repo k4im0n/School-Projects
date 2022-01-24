@@ -8,6 +8,7 @@ public class CheeseChampion {
     private Queue<Mouse> input;
     private Queue<Mouse> output;
     private final Stack<Mouse> press;
+    private final GUI gui = new GUI();
 
     public CheeseChampion() {
         input = new Queue<>();
@@ -19,7 +20,7 @@ public class CheeseChampion {
         input.enqueue(mouse);
     }
 
-    public void startSimulation() {
+    public void playSimulation() {
         while (!input.isEmpty() || !press.isEmpty()) {
             if (!input.isEmpty()) {
                 sendNextMouse();
@@ -71,10 +72,8 @@ public class CheeseChampion {
         }
     }
 
-    private Mouse[] fight(Mouse mouse1, Mouse mouse2) {
-        if (mouse1.getStrenght() > mouse2.getStrenght())
-            return new Mouse[]{mouse1, mouse2};
-        else return new Mouse[]{mouse2, mouse1};
+    public GUI getGui() {
+        return gui;
     }
 
     public Queue<Mouse> getOutput() {
