@@ -44,29 +44,36 @@ public class Lol {
         double v = 0;
         while (game){
             view.wait(10);
+            
             if(hole.intersects(player)){
                 view.keyBufferDelete();
             }
+
             if(!bottom.intersects(player) || hole.intersects(player)){
                 fallv= fallv+g*0.01;
             } else {
                 fallv = 0;
                 player.moveTo(player.getShapeX(),341);
             }
+
             if(view.keyUpPressed()){
                 if(bottom.intersects(player) && !hole.intersects(player)) {
                     fallv = -1;
                 }
             }
+
             if(view.keyRightPressed()){
                 v = 5;
             }
+
             if(view.keyLeftPressed()){
                 v = -5;
             }
+
             if(!background.contains(player) && !bottom.intersects(player)){
                 game = false;
             }
+
             if ((v > 0 && v < 0.01) || (v < 0 && v > -0.01)) v = 0;
             if (v != 0) v = v / 1.1;
             player.move(v,fallv*10);
