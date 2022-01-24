@@ -1,7 +1,7 @@
 package de.kaimon.schoolproject.simon;
 
-import de.kaimon.schoolproject.simon.cheesechampion.CheeseChampion;
-import de.kaimon.schoolproject.simon.cheesechampion.Mouse;
+import de.kaimon.schoolproject.simon.cheesechampiongui.CheeseChampion;
+import de.kaimon.schoolproject.simon.cheesechampiongui.Mouse;
 
 public class SchoolProjectSimon {
 
