@@ -44,7 +44,7 @@ public class Lol {
         double v = 0;
         while (game){
             view.wait(10);
-            
+
             if(hole.intersects(player)){
                 view.keyBufferDelete();
             }
