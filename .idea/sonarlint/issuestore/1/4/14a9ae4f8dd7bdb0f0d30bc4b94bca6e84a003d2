@@ -1,0 +1,11 @@
+
+h
+java:S37766"RRefactor this method to reduce its Cognitive Complexity from 33 to the 15 allowed.(îÊÕË
+J
+java:S1068"/Remove this unused "background2" private field.(Ñ±Ğ™üÿÿÿÿ
+E
+java:S1068"(Remove this unused "left" private field.(µÅÀ8ùÑ­ôí/
+F
+java:S1068")Remove this unused "right" private field.(Û€×8á¸­ôí/
+J
+java:S1066O"/Merge this if statement with the enclosing one.(­éôõşÿÿÿÿ
