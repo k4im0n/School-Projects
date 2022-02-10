@@ -73,10 +73,6 @@ Nsrc/main/java/de/kaimon/schoolproject/kai/trees/treetraversionen/TreeView.java
 `src/main/java/de/kaimon/schoolproject/implementations/datenstrukturklassen/baum/TreeViewGUI.java,7\2\72126d6ddd7b992fafa20356257d7c27dc4d846f
 ç
 ]src/main/java/de/kaimon/schoolproject/implementations/datenstrukturklassen/baum/TreeView.java,e\5\e5d69bfc58e529ed9e3d5938a14abc36efdc29e7
-o
-?src/main/java/de/kaimon/schoolproject/kai/SchoolProjectKai.java,4\3\438687ca38c340da9649bc7509f5f3dfaaac6eac
-Ç
-Rsrc/main/java/de/kaimon/schoolproject/kai/trees/treeconverter/BinaryConverter.java,e\e\ee9eec65f0a18d12fb1d76257b2f24de2488f3f7
 Å
 Qsrc/main/java/de/kaimon/schoolproject/kai/trees/treeconverter/MorseConverter.java,d\7\d7289ecc96b56af3d4f0807cce271e3e9104a26f
 f
