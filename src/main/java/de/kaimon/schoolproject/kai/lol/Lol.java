@@ -13,12 +13,12 @@ public class Lol {
     private Rectangle background;
     private Rectangle bottom;
     private Rectangle hole;
-    private Rectangle platformtop;
-    private Sprite platform;
     private Sprite player;
     private Button left;
     private Button right;
     private Button up;
+    private Button pause;
+    private Platform platform;
 
     public Lol(){
         view = new View(600,400);
@@ -26,25 +26,28 @@ public class Lol {
         background = new Rectangle(10,10,580,380, Color.WHITE);
         bottom = new Rectangle(0,380,600,200,Color.GRAY);
         hole = new Rectangle(300,380,100,200,Color.white);
-        platformtop = new Rectangle(200, 285, 200, 5, Color.GRAY);
-        platform = new Sprite(new Rectangle(200, 285, 200, 20, Color.GRAY));
-        platform.add(platformtop);
+        platform = new Platform(200,285,200,5, Color.gray);
         player = new Sprite(new Circle(50,100, 20, Color.RED));
         boolean run = true;
-        Button knopf = new Button(100,100, 20,20,"Start", Color.gray);
+        Button startKnopf = new Button(20,20, 50,20,"Start: S", Color.gray);
+        Button exitKnopf = new Button(20,50, 50,20,"Exit: Q", Color.gray);
         left = new Button(0,340,60,60,"<", Color.gray);
         right = new Button(60,340,60,60,">", Color.gray);
         up  = new Button(540,340,60,60,"^", Color.gray);
-        Text txt = new Text(100, 100, """
-                    exit: Q
-                    start: S""");
+        pause = new Button(550,20,30,30, "||", Color.GRAY);
+        pause.setHidden(true);
+        left.setHidden(true);
+        right.setHidden(true);
+        up.setHidden(true);
         while (run) {
-            txt.setHidden(false);
-            knopf.setHidden(false);
-            if (view.keyPressed('q')) run = false;
-            if (view.keyPressed('s')|| knopf.clicked()) {
-                knopf.setHidden(true);
-                txt.setHidden(true);
+            exitKnopf.setHidden(false);
+            startKnopf.setHidden(false);
+            pause.setHidden(true);
+            if (view.keyPressed('q') || exitKnopf.clicked()) run = false;
+            if (view.keyPressed('s') || startKnopf.clicked()) {
+                startKnopf.setHidden(true);
+                exitKnopf.setHidden(true);
+                pause.setHidden(false);
                 game();
             }
             view.wait(10);
@@ -58,9 +61,16 @@ public class Lol {
         double fallv = 0;
         double v = 0;
         while (game){
+            if(view.keyEnterPressed() || pause.clicked()){
+                view.keyBufferDelete();
+                while (!view.keyEnterPressed() || !pause.clicked()){
+                    view.wait(10);
+                }
+                view.keyBufferDelete();
+            }
             view.wait(10);
 
-            if(player.intersects(platform)){
+            if(platform.atbody(player) || platform.onTop(player)){
                 fallv = 0;
             }
 
@@ -68,15 +78,19 @@ public class Lol {
                 view.keyBufferDelete();
             }
 
-            if((!bottom.intersects(player) )|| hole.intersects(player)){
+            if((!bottom.intersects(player) && !platform.onTop(player) )|| hole.intersects(player)){
                 fallv= fallv+g*0.01;
             } else {
                 fallv = 0;
-                player.moveTo(player.getShapeX(), 341);
+                if (player.intersects(bottom)) {
+                    player.moveTo(player.getShapeX(), bottom.getShapeY()-39);
+                }else if(platform.onTop(player)){
+                    player.moveTo(player.getShapeX(), platform.getYPos()-39);
+                }
             }
 
             if(view.keyUpPressed() || up.clicked()){
-                if((bottom.intersects(player) || player.intersects(platformtop))&& !hole.intersects(player)) {
+                if((bottom.intersects(player) || platform.onTop(player))&& !hole.intersects(player)) {
                     fallv = -1;
                 }
             }
