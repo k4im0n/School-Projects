@@ -41,8 +41,6 @@ esrc/main/java/de/kaimon/schoolproject/kai/cheesechampion/cheesechampionlalediti
 Ysrc/main/java/de/kaimon/schoolproject/kai/cheesechampion/cheesechampiontrueone/Mouse.java,6\0\60fdb13bae80248f36ca4fb59bdccd2acdb1215a
 Å
 Qsrc/main/java/de/kaimon/schoolproject/simon/cheesechampiongui/CheeseChampion.java,7\e\7e75064f2c41bda5cf4444844dac5ed40f46fbfd
-t
-Dsrc/main/java/de/kaimon/schoolproject/kai/fackult√§t/FackUlt√§t.java,1\2\1243a1d2318d15fcc746e269eedc18c0a6f6c3ec
 r
 Bsrc/main/java/de/kaimon/schoolproject/kai/fibonachi/Fibonachi.java,0\8\0889b3b907c91b5f1b2ba113aaf9655ad9d8c7af
 v
@@ -51,10 +49,6 @@ Fsrc/main/java/de/kaimon/schoolproject/kai/fibonachi/FindFibonachi.java,2\8\280
 Osrc/main/java/de/kaimon/schoolproject/simon/implementations/dynamisch/List.java,0\e\0ea2f841bb9efed93aa08c177d91e47e15d3acb3
 ã
 [src/main/java/de/kaimon/schoolproject/implementations/datenstrukturklassen/linear/List.java,b\5\b56b0f683bc9d020663f85bbeacd5de61a48f639
-f
-6src/main/java/de/kaimon/schoolproject/kai/Meldung.java,7\e\7eca0c02ae6cbf649fdf16538376d8f39b9d5692
-o
-?src/main/java/de/kaimon/schoolproject/kai/VerwaltungsListe.java,e\0\e0f580fa47d55b931c83aed5fccb65831c0b413e
 ñ
 fsrc/main/java/de/kaimon/schoolproject/implementations/datenstrukturklassen/baum/ComparableContent.java,a\d\ad691d3ad075ed340838b94d5f1ec297fcfd1684
 ï
@@ -73,7 +67,3 @@ Nsrc/main/java/de/kaimon/schoolproject/kai/trees/treetraversionen/TreeView.java
 `src/main/java/de/kaimon/schoolproject/implementations/datenstrukturklassen/baum/TreeViewGUI.java,7\2\72126d6ddd7b992fafa20356257d7c27dc4d846f
 ç
 ]src/main/java/de/kaimon/schoolproject/implementations/datenstrukturklassen/baum/TreeView.java,e\5\e5d69bfc58e529ed9e3d5938a14abc36efdc29e7
-Å
-Qsrc/main/java/de/kaimon/schoolproject/kai/trees/treeconverter/MorseConverter.java,d\7\d7289ecc96b56af3d4f0807cce271e3e9104a26f
-f
-6src/main/java/de/kaimon/schoolproject/kai/lol/Lol.java,1\4\14a9ae4f8dd7bdb0f0d30bc4b94bca6e84a003d2

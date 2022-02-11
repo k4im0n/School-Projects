@@ -1,4 +1,4 @@
-package src.main.java.de.kaimon.schoolproject.kai.zruns;
+package de.kaimon.schoolproject.kai.zruns;
 
 import de.kaimon.schoolproject.kai.trees.treeconverter.MorseConverter;
 
@@ -43,14 +43,14 @@ public class SchoolProjectKai {
                     break;
                 case "fak":
                     System.out.print("Fakultät Zahl: ");
-                    new de.kaimon.schoolproject.kai.fackultät.FackUltät(Integer.parseInt(reader.readLine()));
+                    new de.kaimon.schoolproject.kai.fackultet.FackUltet(Integer.parseInt(reader.readLine()));
                     break;
                 case "fib":
                     System.out.print("Fibonachi Zahl: ");
-                    new de.kaimon.schoolproject.kai.fibonachi.Fibonachi(Integer.parseInt(reader.readLine()));
+                    new src.main.java.de.kaimon.schoolproject.kai.fibonachi.Fibonachi(Integer.parseInt(reader.readLine()));
                     break;
                 case "lol":
-                    new de.kaimon.schoolproject.kai.lol.Lol();
+                    new src.main.java.de.kaimon.schoolproject.kai.lol.Lol();
                     break;
                 case "btt":
                     new de.kaimon.schoolproject.kai.trees.treetraversionen.Traversion();

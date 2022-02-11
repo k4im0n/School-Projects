@@ -2,7 +2,6 @@ package de.kaimon.schoolproject.kai.trees.treeconverter;
 
 import de.kaimon.schoolproject.implementations.datenstrukturklassen.baum.BinaryTree;
 import de.kaimon.schoolproject.implementations.datenstrukturklassen.baum.TreeViewGUI;
-import org.jetbrains.annotations.NotNull;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -39,7 +38,7 @@ public class MorseConverter {
         }
     }
 
-    private String morseToString(BinaryTree<String> morseTree, @NotNull String morse) {
+    private String morseToString(BinaryTree<String> morseTree, String morse) {
         if(morse.length() == 0) return morseTree.getContent();
         else{
             if(morse.charAt(0) == '.') return morseToString(morseTree.getLeftTree(), morse.substring(1));
@@ -49,56 +48,61 @@ public class MorseConverter {
         }
     }
 
-    private String stringToMorse(@NotNull String input){
+    private String stringToMorse(String input){
         String out = "";
         while (input.length() > 0) {
-            out = out + switch ("" + input.toLowerCase(Locale.ROOT).charAt(0)) {
-                case "a" -> ".- ";
-                case "b" -> "-... ";
-                case "c" -> "-.-. ";
-                case "d" -> "-.. ";
-                case "e" -> ". ";
-                case "f" -> "..-. ";
-                case "g" -> "--. ";
-                case "h" -> ".... ";
-                case "i" -> ".. ";
-                case "j" -> ".--- ";
-                case "k" -> "-.- ";
-                case "l" -> ".-.. ";
-                case "m" -> "-- ";
-                case "n" -> "-. ";
-                case "o" -> "--- ";
-                case "p" -> ".--. ";
-                case "q" -> "--.- ";
-                case "r" -> ".-. ";
-                case "s" -> "... ";
-                case "t" -> "- ";
-                case "u" -> "..- ";
-                case "v" -> "...- ";
-                case "w" -> ".-- ";
-                case "x" -> "-..- ";
-                case "y" -> "-.-- ";
-                case "z" -> "--.. ";
-                case "ä" -> ".-.- ";
-                case "ö" -> "---. ";
-                case "ü" -> "..-- ";
-                case "ß" -> "---- ";
-                case "+" -> ".-.-. ";
-                case "." -> ".-.-.- ";
-                case "6" -> "-.... ";
-                case "-" -> "-....- ";
-                case "=" -> "-...- ";
-                case "/" -> "-..-. ";
-                case ":" -> "---... ";
-                case "8" -> "---.. ";
-                case "Ż" -> "--..- ";
-                case "," -> "--..-- ";
-                case " " -> "/ ";
-                default -> input + " ";
-            };
+            out += switchh(input);
             input = input.substring(1);
         }
         return out;
+    }
+    
+    private String switchh(String input){
+        String out = "";
+        switch ("" + input.toLowerCase(Locale.ROOT).charAt(0)) {
+                case "a" : return".- ";
+                case "b" : return "-... ";
+                case "c" : return "-.-. ";
+                case "d" : return "-.. ";
+                case "e" : return ". ";
+                case "f" : return "..-. ";
+                case "g" : return "--. ";
+                case "h" : return ".... ";
+                case "i" : return ".. ";
+                case "j" : return ".--- ";
+                case "k" : return "-.- ";
+                case "l" : return ".-.. ";
+                case "m" : return "-- ";
+                case "n" : return "-. ";
+                case "o" : return "--- ";
+                case "p" : return ".--. ";
+                case "q" : return "--.- ";
+                case "r" : return ".-. ";
+                case "s" : return "... ";
+                case "t" : return "- ";
+                case "u" : return "..- ";
+                case "v" : return "...- ";
+                case "w" : return ".-- ";
+                case "x" : return "-..- ";
+                case "y" : return "-.-- ";
+                case "z" : return "--.. ";
+                case "ä" : return ".-.- ";
+                case "ö" : return "---. ";
+                case "ü" : return "..-- ";
+                case "ß" : return "---- ";
+                case "+" : return ".-.-. ";
+                case "." : return ".-.-.- ";
+                case "6" : return "-.... ";
+                case "-" : return "-....- ";
+                case "=" : return "-...- ";
+                case "/" : return "-..-. ";
+                case ":" : return "---... ";
+                case "8" : return "---.. ";
+                case "Ż" : return "--..- ";
+                case "," : return "--..-- ";
+                case " " : return "/ ";
+                default : return input + " ";
+            }
     }
 
     private void fillTree(){
