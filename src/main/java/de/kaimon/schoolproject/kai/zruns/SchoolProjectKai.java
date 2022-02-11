@@ -1,4 +1,4 @@
-package de.kaimon.schoolproject.kai.zruns;
+package src.main.java.de.kaimon.schoolproject.kai.zruns;
 
 import de.kaimon.schoolproject.kai.trees.treeconverter.MorseConverter;
 

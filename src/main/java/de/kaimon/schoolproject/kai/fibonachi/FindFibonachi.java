@@ -1,4 +1,4 @@
-package de.kaimon.schoolproject.kai.fibonachi;
+package src.main.java.de.kaimon.schoolproject.kai.fibonachi;
 
 public class FindFibonachi {
     public FindFibonachi(int n){

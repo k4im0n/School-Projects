@@ -1,4 +1,4 @@
-package de.kaimon.schoolproject.kai.trees;
+package src.main.java.de.kaimon.schoolproject.kai.trees;
 
 import de.kaimon.schoolproject.implementations.datenstrukturklassen.baum.BinaryTree;
 

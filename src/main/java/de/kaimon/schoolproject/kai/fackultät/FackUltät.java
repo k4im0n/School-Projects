@@ -1,4 +1,4 @@
-package de.kaimon.schoolproject.kai.fackultät;
+package src.main.java.de.kaimon.schoolproject.kai.fackult�t;
 
 public class FackUltät {
      public FackUltät(double n){
