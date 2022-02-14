@@ -33,8 +33,6 @@ dsrc/main/java/de/kaimon/schoolproject/implementations/datenbankklassen/SQLite/D
 \src/main/java/de/kaimon/schoolproject/kai/cheesechampion/cheesechampionlaledition/Mouse.java,8\2\82cb5b1a0e2936c621e2bbcbf29c89d8b2c73a88
 Ç
 Rsrc/main/java/de/kaimon/schoolproject/kai/cheesechampion/cheesechampion/Mouse.java,b\e\be3d1cc4ee845b9d060434abd0e8c0fa9fbe55ef
-ã
-[src/main/java/de/kaimon/schoolproject/kai/cheesechampion/cheesechampion/CheeseChampion.java,b\3\b34952d03c1045ee1322750947845ab05f5f11f8
 ï
 esrc/main/java/de/kaimon/schoolproject/kai/cheesechampion/cheesechampionlaledition/CheeseChampion.java,4\2\42ccce23d431b58e555751c4bf0d69ba5e2503f6
 â
@@ -67,3 +65,15 @@ Nsrc/main/java/de/kaimon/schoolproject/kai/trees/treetraversionen/TreeView.java
 `src/main/java/de/kaimon/schoolproject/implementations/datenstrukturklassen/baum/TreeViewGUI.java,7\2\72126d6ddd7b992fafa20356257d7c27dc4d846f
 ç
 ]src/main/java/de/kaimon/schoolproject/implementations/datenstrukturklassen/baum/TreeView.java,e\5\e5d69bfc58e529ed9e3d5938a14abc36efdc29e7
+f
+6src/main/java/de/kaimon/schoolproject/kai/lol/Lol.java,1\4\14a9ae4f8dd7bdb0f0d30bc4b94bca6e84a003d2
+Å
+Qsrc/main/java/de/kaimon/schoolproject/kai/trees/treeconverter/MorseConverter.java,d\7\d7289ecc96b56af3d4f0807cce271e3e9104a26f
+r
+Bsrc/main/java/de/kaimon/schoolproject/kai/fackultet/FackUltet.java,c\f\cfbdfb234fc05ff4da1527e61ad86446ca122081
+u
+Esrc/main/java/de/kaimon/schoolproject/kai/zruns/SchoolProjectKai.java,9\4\94dffadf417c88226f45d3d7e86ae1ab44caa758
+k
+;src/main/java/de/kaimon/schoolproject/kai/lol/Platform.java,0\2\02505fe364f151040b35108f30f24fb84f291c8c
+ã
+[src/main/java/de/kaimon/schoolproject/kai/cheesechampion/cheesechampion/CheeseChampion.java,b\3\b34952d03c1045ee1322750947845ab05f5f11f8
