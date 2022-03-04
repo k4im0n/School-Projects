@@ -1,4 +1,4 @@
-package src.main.java.de.kaimon.schoolproject.kai.fibonachi;
+package de.kaimon.schoolproject.kai.fibonachi;
 
 public class Fibonachi {
 

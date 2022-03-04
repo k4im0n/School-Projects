@@ -1,4 +1,4 @@
-package src.main.java.de.kaimon.schoolproject.kai.lol;
+package de.kaimon.schoolproject.kai.lol;
 
 import sas.Rectangle;
 import sas.Shapes;

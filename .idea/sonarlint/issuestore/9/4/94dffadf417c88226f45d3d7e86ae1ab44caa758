@@ -1,8 +1,0 @@
-
-S	java:S106"9Replace this use of System.out or System.err by a logger.(ÅŠ¤Ùøÿÿÿÿ
-f	java:S128;"LEnd this switch case with an unconditional break, return or throw statement.(Œ¹Ñõýÿÿÿÿ
-f	java:S1289"LEnd this switch case with an unconditional break, return or throw statement.(Ð™ƒÞùÿÿÿÿ
-a	java:S1287"LEnd this switch case with an unconditional break, return or throw statement.(”ÙÖî
-S	java:S106-"9Replace this use of System.out or System.err by a logger.(Ê³Ð¥ÿÿÿÿÿ
-S	java:S1061"9Replace this use of System.out or System.err by a logger.(¼Àï˜úÿÿÿÿ
-N	java:S106A"9Replace this use of System.out or System.err by a logger.(ç¦…Å

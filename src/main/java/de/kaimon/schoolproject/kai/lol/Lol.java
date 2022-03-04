@@ -1,9 +1,8 @@
-package src.main.java.de.kaimon.schoolproject.kai.lol;
+package de.kaimon.schoolproject.kai.lol;
 
 import sas.*;
 import sas.Rectangle;
 import sasio.Button;
-
 import java.awt.*;
 
 public class Lol {

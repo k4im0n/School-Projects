@@ -47,10 +47,10 @@ public class SchoolProjectKai {
                     break;
                 case "fib":
                     System.out.print("Fibonachi Zahl: ");
-                    new src.main.java.de.kaimon.schoolproject.kai.fibonachi.Fibonachi(Integer.parseInt(reader.readLine()));
+                    new de.kaimon.schoolproject.kai.fibonachi.Fibonachi(Integer.parseInt(reader.readLine()));
                     break;
                 case "lol":
-                    new src.main.java.de.kaimon.schoolproject.kai.lol.Lol();
+                    new de.kaimon.schoolproject.kai.lol.Lol();
                     break;
                 case "btt":
                     new de.kaimon.schoolproject.kai.trees.treetraversionen.Traversion();
