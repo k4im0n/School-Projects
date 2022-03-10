@@ -1,10 +1,0 @@
-
-N	java:S106"9Replace this use of System.out or System.err by a logger.(ÃÒ»È
-S	java:S106"9Replace this use of System.out or System.err by a logger.(óÄÉ„úÿÿÿÿ
-S	java:S106"9Replace this use of System.out or System.err by a logger.(öü¼ıÿÿÿÿ
-N	java:S106"9Replace this use of System.out or System.err by a logger.(’¥ù†
-N	java:S106"9Replace this use of System.out or System.err by a logger.(œùö
-7	java:S131""Add a default case to this switch.(™Ïêƒ
-S	java:S106"9Replace this use of System.out or System.err by a logger.(ªøíÜÿÿÿÿÿ
-a
-java:S1301"KReplace this "switch" statement by "if" statements to increase readability.(™Ïêƒ

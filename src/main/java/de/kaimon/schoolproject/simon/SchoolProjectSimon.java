@@ -1,6 +1,9 @@
 package de.kaimon.schoolproject.simon;
 
 import de.kaimon.schoolproject.simon.globalutils.Color;
+import de.kaimon.schoolproject.simon.politiciantree.CompareType;
+import de.kaimon.schoolproject.simon.politiciantree.Politician;
+import de.kaimon.schoolproject.simon.politiciantree.PoliticianTrees;
 
 import java.util.Scanner;
 
@@ -10,16 +13,23 @@ public class SchoolProjectSimon {
 
     public static void main(String[] args) {
         System.out.println(Color.PURPLE + "Liste alles Projekte:");
-        System.out.println(Color.RED + "01." + Color.CYAN + " TestProject " + Color.BLUE + "[TEST]");
-        System.out.println(Color.RED + "02." + Color.CYAN + " SaS2 " + Color.BLUE + "[SAS2]");
-        System.out.println(Color.RED + "03." + Color.CYAN + " CookieClicker " + Color.BLUE + "[CC]");
-        System.out.print(Color.YELLOW + "Deine Wahl: ");
+        System.out.println(Color.GREEN + "01." + Color.CYAN + " PoliticianTreeFame " + Color.BLUE + "[PTF]");
+        System.out.println(Color.GREEN + "01." + Color.CYAN + " PoliticianTreeName " + Color.BLUE + "[PTN]");
         while (true) {
+            System.out.print(Color.YELLOW + "Deine Wahl: ");
             String input = scanner.next();
             if (input.equals("EXIT")) break;
             switch (input) {
-                case "TEST":
-
+                case "PTF":
+                    PoliticianTrees politicianTreesFame = new PoliticianTrees();
+                    politicianTreesFame.buildTree(CompareType.FAME);
+                    break;
+                case "PTN":
+                    PoliticianTrees politicianTreesName = new PoliticianTrees();
+                    politicianTreesName.buildTree(CompareType.NAME);
+                    break;
+                default:
+                    System.out.println(Color.RED + input + " ist keine gültige Eingabe!");
                     break;
             }
         }

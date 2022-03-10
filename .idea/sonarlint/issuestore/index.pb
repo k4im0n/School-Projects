@@ -1,8 +1,6 @@
 
 u
 Esrc/main/java/de/kaimon/schoolproject/simon/cheesechampion/Mouse.java,7\f\7f3435079376317c750390c110db1705897265fb
-v
-Fsrc/main/java/de/kaimon/schoolproject/simon/cheesechampiongui/GUI.java,8\a\8a453855c6368680bb27f12bf703537280354d18
 x
 Hsrc/main/java/de/kaimon/schoolproject/simon/cheesechampiongui/Mouse.java,b\c\bcfce269bc09c58ce2386ad59eb8248984c66e04
 ä
@@ -39,12 +37,8 @@ Ysrc/main/java/de/kaimon/schoolproject/kai/cheesechampion/cheesechampiontrueone/
 Qsrc/main/java/de/kaimon/schoolproject/simon/cheesechampiongui/CheeseChampion.java,7\e\7e75064f2c41bda5cf4444844dac5ed40f46fbfd
 v
 Fsrc/main/java/de/kaimon/schoolproject/kai/fibonachi/FindFibonachi.java,2\8\280b8e5c9d38d774ad974e8775e8c311b00b2d98
-
-Osrc/main/java/de/kaimon/schoolproject/simon/implementations/dynamisch/List.java,0\e\0ea2f841bb9efed93aa08c177d91e47e15d3acb3
 ã
 [src/main/java/de/kaimon/schoolproject/implementations/datenstrukturklassen/linear/List.java,b\5\b56b0f683bc9d020663f85bbeacd5de61a48f639
-ñ
-fsrc/main/java/de/kaimon/schoolproject/implementations/datenstrukturklassen/baum/ComparableContent.java,a\d\ad691d3ad075ed340838b94d5f1ec297fcfd1684
 è
 _src/main/java/de/kaimon/schoolproject/implementations/datenstrukturklassen/baum/BinaryTree.java,f\5\f5bb2a6f0d65f6cf84dd7e8dfa099219db4a30e9
 í
@@ -53,15 +47,7 @@ bsrc/main/java/de/kaimon/schoolproject/kai/cheesechampion/cheesechampiontrueone/
 Qsrc/main/java/de/kaimon/schoolproject/kai/trees/treetraversionen/TreeViewGUI.java,d\6\d6aca1c7972908d41dcafee42b80b0c52d82bbee
 ~
 Nsrc/main/java/de/kaimon/schoolproject/kai/trees/treetraversionen/TreeView.java,c\a\ca94b0e3b19de91f68c5ab2f0fd73695f9d06ae6
-ê
-`src/main/java/de/kaimon/schoolproject/implementations/datenstrukturklassen/baum/TreeViewGUI.java,7\2\72126d6ddd7b992fafa20356257d7c27dc4d846f
-ç
-]src/main/java/de/kaimon/schoolproject/implementations/datenstrukturklassen/baum/TreeView.java,e\5\e5d69bfc58e529ed9e3d5938a14abc36efdc29e7
-~
-Nsrc/main/java/de/kaimon/schoolproject/simon/cheesechampion/CheeseChampion.java,4\0\40d9e08a820fd53c6417feb934215d9ff8020ad1
 u
 Esrc/main/java/de/kaimon/schoolproject/kai/zruns/SchoolProjectKai.java,9\4\94dffadf417c88226f45d3d7e86ae1ab44caa758
 r
 Bsrc/main/java/de/kaimon/schoolproject/simon/globalutils/Color.java,0\7\07953edd96ad31d2e4b3291060e3c47bfee392a7
-s
-Csrc/main/java/de/kaimon/schoolproject/simon/SchoolProjectSimon.java,6\e\6e04a2d9bd177c5765792ae9d26892cf27a58fe8
