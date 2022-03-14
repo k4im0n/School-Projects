@@ -25,6 +25,7 @@ public class SchoolProjectKai {
                 btt für binarytree traversion
                 moc für MorseConverter
                 btc für BynaryConverter
+                pbs für Politicians BinarySearchTree
                 Ihre Wahl:""" + " "
             );
 
@@ -58,6 +59,8 @@ public class SchoolProjectKai {
                     new MorseConverter();
                 case "btc":
                     new de.kaimon.schoolproject.kai.trees.treeconverter.BinaryConverter();
+                case "pbs":
+                    new de.kaimon.schoolproject.kai.politikerranking.binaryserchtree.Election();
                 case "exit":
                     exit = false;
                     break;
