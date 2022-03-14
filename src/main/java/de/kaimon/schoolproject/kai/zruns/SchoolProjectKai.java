@@ -60,7 +60,7 @@ public class SchoolProjectKai {
                 case "btc":
                     new de.kaimon.schoolproject.kai.trees.treeconverter.BinaryConverter();
                 case "pbs":
-                    new de.kaimon.schoolproject.kai.politikerranking.binaryserchtree.Election();
+                    new de.kaimon.schoolproject.kai.politikerranking.binaryserchtree.Start();
                 case "exit":
                     exit = false;
                     break;

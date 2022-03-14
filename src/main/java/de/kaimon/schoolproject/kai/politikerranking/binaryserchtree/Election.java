@@ -4,9 +4,14 @@ import de.kaimon.schoolproject.implementations.datenstrukturklassen.baum.BinaryT
 import de.kaimon.schoolproject.implementations.datenstrukturklassen.baum.TreeViewGUI;
 import sas.Tools;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+
 public class Election {
 
-    public Election(){
+    public Election(String sortBy) throws IOException {
         Politician politicians[] = new Politician[6];
         politicians[0] = new Politician(Tools.randomNumber(0,100), "Hallo");
         politicians[1] = new Politician(Tools.randomNumber(0,100), "LOL");
@@ -14,7 +19,11 @@ public class Election {
         politicians[3] = new Politician(Tools.randomNumber(0,100), "SUS");
         politicians[4] = new Politician(Tools.randomNumber(0,100), "LAAAL");
         politicians[5] = new Politician(Tools.randomNumber(0,100), "SHEESH");
-        new TreeViewGUI(sortAndCreateTree(politicians, "fame"));
+        new TreeViewGUI(sortAndCreateTree(politicians, sortBy));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.print("press enter: ");
+        reader.readLine();
+
     }
 
     public BinaryTree<String> sortAndCreateTree(Politician[] politicians, String sortBy){
@@ -30,7 +39,18 @@ public class Election {
                 }
             }
         }
-        if
+        if(sortBy.equals("name")){
+            Politician temp;
+            for(int i = 0; i < politicians.length; i++){
+                for (int j = 0; j < politicians.length - 1; j++) {
+                    if(politicians[j].getName().compareTo(politicians[j+1].getName()) < 0){
+                        temp = politicians[j];
+                        politicians[j] = politicians[j+1];
+                        politicians[j+1] = temp;
+                    }
+                }
+            }
+        }
         return createSearchTree(politicians);
     }
 
