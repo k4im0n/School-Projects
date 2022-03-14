@@ -25,7 +25,7 @@ public class SchoolProjectKai {
                 btt für binarytree traversion
                 moc für MorseConverter
                 btc für BynaryConverter
-                Ihre Wahl: """
+                Ihre Wahl:""" + " "
             );
 
 
