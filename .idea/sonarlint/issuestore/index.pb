@@ -39,8 +39,6 @@ v
 Fsrc/main/java/de/kaimon/schoolproject/kai/fibonachi/FindFibonachi.java,2\8\280b8e5c9d38d774ad974e8775e8c311b00b2d98
 ã
 [src/main/java/de/kaimon/schoolproject/implementations/datenstrukturklassen/linear/List.java,b\5\b56b0f683bc9d020663f85bbeacd5de61a48f639
-è
-_src/main/java/de/kaimon/schoolproject/implementations/datenstrukturklassen/baum/BinaryTree.java,f\5\f5bb2a6f0d65f6cf84dd7e8dfa099219db4a30e9
 í
 bsrc/main/java/de/kaimon/schoolproject/kai/cheesechampion/cheesechampiontrueone/CheeseChampion.java,c\4\c4553541f63835cc7736d3f47c9b02fd11888288
 Å
@@ -51,3 +49,13 @@ u
 Esrc/main/java/de/kaimon/schoolproject/kai/zruns/SchoolProjectKai.java,9\4\94dffadf417c88226f45d3d7e86ae1ab44caa758
 r
 Bsrc/main/java/de/kaimon/schoolproject/simon/globalutils/Color.java,0\7\07953edd96ad31d2e4b3291060e3c47bfee392a7
+h
+8src/main/java/de/kaimon/schoolproject/kai/zruns/Lol.java,4\e\4e35a99db07e164aa52870fee4242d8a6495addd
+ä
+Zsrc/main/java/de/kaimon/schoolproject/kai/politikerranking/binaryserchtree/Politician.java,f\7\f7281c9791f2ea2337acf723a7a245f3bcd556d4
+Ö
+Usrc/main/java/de/kaimon/schoolproject/kai/politikerranking/binaryserchtree/Start.java,2\b\2b1aef3ba86e414d4f39f51b25cc9d38aa8e34f3
+à
+Xsrc/main/java/de/kaimon/schoolproject/kai/politikerranking/binaryserchtree/Election.java,8\5\8544d8639afab564803202f0cbc4ad4227467ef7
+è
+_src/main/java/de/kaimon/schoolproject/implementations/datenstrukturklassen/baum/BinaryTree.java,f\5\f5bb2a6f0d65f6cf84dd7e8dfa099219db4a30e9
