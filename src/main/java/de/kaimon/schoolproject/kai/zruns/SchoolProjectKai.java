@@ -26,6 +26,7 @@ public class SchoolProjectKai {
                 moc für MorseConverter
                 btc für BynaryConverter
                 pbs für Politicians BinarySearchTree
+                rso für Raum zuweisung
                 Ihre Wahl:""" + " "
             );
 
@@ -61,6 +62,8 @@ public class SchoolProjectKai {
                     new de.kaimon.schoolproject.kai.trees.treeconverter.BinaryConverter();
                 case "pbs":
                     new de.kaimon.schoolproject.kai.politikerranking.binaryserchtree.Start();
+                case "rso":
+                    new de.kaimon.schoolproject.kai.roomsort.Manage();
                 case "exit":
                     exit = false;
                     break;

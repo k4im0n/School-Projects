@@ -1,0 +1,9 @@
+
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ÃÒ»È
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ŒßÜøÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ÆÕÊÖ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(œùö
+N	java:S106 "9Replace this use of System.out or System.err by a logger.(ìÃª
+S	java:S106$"9Replace this use of System.out or System.err by a logger.(ªøíÜÿÿÿÿÿ
+o
+java:S1128"TRemove this unused import 'de.kaimon.schoolproject.simon.politiciantree.Politician'.(ÓÏÿ—ùÿÿÿÿ
