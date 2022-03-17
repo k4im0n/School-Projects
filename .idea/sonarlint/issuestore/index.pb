@@ -49,5 +49,3 @@ Qsrc/main/java/de/kaimon/schoolproject/kai/trees/treetraversionen/TreeViewGUI.ja
 Nsrc/main/java/de/kaimon/schoolproject/kai/trees/treetraversionen/TreeView.java,c\a\ca94b0e3b19de91f68c5ab2f0fd73695f9d06ae6
 u
 Esrc/main/java/de/kaimon/schoolproject/kai/zruns/SchoolProjectKai.java,9\4\94dffadf417c88226f45d3d7e86ae1ab44caa758
-r
-Bsrc/main/java/de/kaimon/schoolproject/simon/globalutils/Color.java,0\7\07953edd96ad31d2e4b3291060e3c47bfee392a7

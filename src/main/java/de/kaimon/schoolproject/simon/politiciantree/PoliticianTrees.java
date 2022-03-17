@@ -26,6 +26,6 @@ public class PoliticianTrees {
             politicians[i].setCompareType(compareType);
             tree.insert(politicians[i]);
         }
-        new SearchTreeView(600, 1000, tree);
+        new SearchTreeViewGUI(tree);
     }
 }
