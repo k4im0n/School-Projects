@@ -1,5 +1,6 @@
 package de.kaimon.schoolproject.kai.zruns;
 
+import de.kaimon.schoolproject.kai.trees.politikerranking.Start;
 import de.kaimon.schoolproject.kai.trees.treeconverter.MorseConverter;
 
 import java.io.BufferedReader;
@@ -26,6 +27,7 @@ public class SchoolProjectKai {
                 moc für MorseConverter
                 btc für BynaryConverter
                 pbs für Politicians BinarySearchTree
+                pbt für Politicians BinaryTree
                 rso für Raum zuweisung
                 Ihre Wahl:""" + " "
             );
@@ -61,7 +63,9 @@ public class SchoolProjectKai {
                 case "btc":
                     new de.kaimon.schoolproject.kai.trees.treeconverter.BinaryConverter();
                 case "pbs":
-                    new de.kaimon.schoolproject.kai.politikerranking.binaryserchtree.Start();
+                    new de.kaimon.schoolproject.kai.trees.binaryserchtree.politikerranking.Start();
+                case "pbt":
+                    new de.kaimon.schoolproject.kai.trees.politikerranking.Start();
                 case "rso":
                     new de.kaimon.schoolproject.kai.roomsort.Manage();
                 case "exit":

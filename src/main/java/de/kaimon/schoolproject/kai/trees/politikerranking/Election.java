@@ -1,4 +1,4 @@
-package de.kaimon.schoolproject.kai.politikerranking.binaryserchtree;
+package de.kaimon.schoolproject.kai.trees.politikerranking;
 
 import de.kaimon.schoolproject.implementations.datenstrukturklassen.baum.BinaryTree;
 import de.kaimon.schoolproject.implementations.datenstrukturklassen.baum.TreeViewGUI;

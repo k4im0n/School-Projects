@@ -1,4 +1,6 @@
-package de.kaimon.schoolproject.kai.politikerranking.binaryserchtree;
+package de.kaimon.schoolproject.kai.trees.politikerranking;
+
+import de.kaimon.schoolproject.implementations.datenstrukturklassen.baum.ComparableContent;
 
 public class Politician {
 

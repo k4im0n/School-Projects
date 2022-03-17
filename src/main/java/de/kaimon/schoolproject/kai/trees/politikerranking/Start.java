@@ -1,4 +1,4 @@
-package de.kaimon.schoolproject.kai.politikerranking.binaryserchtree;
+package de.kaimon.schoolproject.kai.trees.politikerranking;
 
 import java.io.BufferedReader;
 import java.io.IOException;
