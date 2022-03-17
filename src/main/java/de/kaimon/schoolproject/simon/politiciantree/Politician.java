@@ -77,6 +77,6 @@ public class Politician implements ComparableContent<Politician> {
 
     @Override
     public String toString() {
-        return name + ' ' + surname + ' ' + fame;
+        return name + surname + ": " + fame;
     }
 }
