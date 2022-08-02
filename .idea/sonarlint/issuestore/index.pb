@@ -57,8 +57,6 @@ Osrc/main/java/de/kaimon/schoolproject/simon/politiciantree/PoliticianTrees.java
 Ksrc/main/java/de/kaimon/schoolproject/simon/politiciantree/CompareType.java,3\a\3ac1740d64506f9fe96777e61fcb9a70dd6f94b3
 –
 fsrc/main/java/de/kaimon/schoolproject/implementations/datenstrukturklassen/baum/ComparableContent.java,a\d\ad691d3ad075ed340838b94d5f1ec297fcfd1684
-h
-8src/main/java/de/kaimon/schoolproject/kai/zruns/Lol.java,4\e\4e35a99db07e164aa52870fee4242d8a6495addd
 l
 <src/main/java/de/kaimon/schoolproject/kai/roomsort/Raum.java,f\b\fbe34f105839277612530e652537125dc6ab05e0
 n
@@ -73,3 +71,15 @@ Nsrc/main/java/de/kaimon/schoolproject/kai/trees/politikerranking/Election.java
 Psrc/main/java/de/kaimon/schoolproject/kai/trees/politikerranking/Politician.java,e\5\e598e500d80d452608d2996e17321d2b81fa45a2
 {
 Ksrc/main/java/de/kaimon/schoolproject/kai/trees/politikerranking/Start.java,5\5\5501ff3786998123ee84d6987dbb500790178837
+Ž
+^src/main/java/de/kaimon/schoolproject/kai/trees/binaryserchtree/politikerranking/Election.java,3\c\3c5a18fc65998b08c4528bd409377f2f92db1abf
+u
+Esrc/main/java/de/kaimon/schoolproject/kai/zruns/SchoolProjectKai.java,9\4\94dffadf417c88226f45d3d7e86ae1ab44caa758
+‹
+[src/main/java/de/kaimon/schoolproject/kai/trees/binaryserchtree/politikerranking/Start.java,9\a\9aec1213ebbe0a0f4280345ca24802a6bd2198ec
+”
+dsrc/main/java/de/kaimon/schoolproject/kai/trees/binaryserchtree/politikerranking/PoliticianName.java,c\f\cff6779f746711c08fcc875c3ed2be918f4bfd89
+”
+dsrc/main/java/de/kaimon/schoolproject/kai/trees/binaryserchtree/politikerranking/PoliticianFame.java,9\0\90b72027ceda3b28bb8d896dd4f9b4b0a2012b93
+h
+8src/main/java/de/kaimon/schoolproject/kai/zruns/Lol.java,4\e\4e35a99db07e164aa52870fee4242d8a6495addd

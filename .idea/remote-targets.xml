@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteTargetsManager">
+    <targets>
+      <target name="ubuntu@192.168.10.88:22" type="ssh/sftp" uuid="5c2d8dc8-e65a-46ed-a5d8-70f8073c308f">
+        <config>
+          <option name="projectRootOnTarget" value="/home/ubuntu/School-Projects" />
+          <option name="serverName" value="ubuntu@192.168.10.88:22 password" />
+        </config>
+        <ContributedStateBase type="JavaLanguageRuntime">
+          <config>
+            <option name="javaVersionString" value="11.0.15" />
+          </config>
+        </ContributedStateBase>
+      </target>
+    </targets>
+  </component>
+</project>

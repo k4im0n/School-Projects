@@ -45,6 +45,7 @@ public class Lol {
         left.setHidden(true);
         right.setHidden(true);
         up.setHidden(true);
+        
         while (run) {
             exitKnopf.setHidden(false);
             startKnopf.setHidden(false);
@@ -66,7 +67,7 @@ public class Lol {
         double g = 4.81;
         double fallv = 0;
         double v = 0;
-        while (game){
+        do{
             if(view.keyEnterPressed() || pause.clicked()){
                 view.keyBufferDelete();
                 while (!view.keyEnterPressed() || !pause.clicked()){
@@ -127,6 +128,6 @@ public class Lol {
             if ((v > 0 && v < 0.01) || (v < 0 && v > -0.01)) v = 0;
             if (v != 0) v = v / 1.1;
             player.move(v,fallv*10);
-        }
+        } while (game);
     }
 }

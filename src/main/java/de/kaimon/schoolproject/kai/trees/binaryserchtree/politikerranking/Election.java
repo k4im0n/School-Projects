@@ -2,6 +2,7 @@ package de.kaimon.schoolproject.kai.trees.binaryserchtree.politikerranking;
 
 import de.kaimon.schoolproject.implementations.datenstrukturklassen.baum.BinarySearchTree;
 import de.kaimon.schoolproject.implementations.datenstrukturklassen.baum.SearchTreeViewGUI;
+import de.kaimon.schoolproject.simon.implementations.dynamisch.List;
 import sas.Tools;
 
 import java.io.BufferedReader;
@@ -9,6 +10,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Election {
+
+    List<String> liste;
 
     public Election(String sortBy) throws IOException {
         if(sortBy.equals("name")){
@@ -35,5 +38,9 @@ public class Election {
         System.out.print("press enter: ");
         reader.readLine();
 
+    }
+
+    public List<String> liste(){
+        return liste;
     }
 }
