@@ -1,40 +1,71 @@
 package de.kaimon.schoolproject.kai.trees.treeconverter;
-
 import de.kaimon.schoolproject.implementations.datenstrukturklassen.baum.BinaryTree;
-import de.kaimon.schoolproject.implementations.datenstrukturklassen.baum.TreeViewGUI;
+import sas.Text;
+import sas.View;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.awt.*;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
 import java.util.Locale;
 
 public class MorseConverter {
 
-    private BinaryTree<String> morseTree;
+    View view;
+    Text title;
+    Text inputText;
+    Text result;
+    String output = "";
+    public MorseConverter(String input, View view){
 
-    public MorseConverter() throws IOException {
-        fillTree();
-        new TreeViewGUI(morseTree);
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        boolean run = true;
-        while (run) {
-            System.out.print("String, Morsecode oder exit: ");
-            String input = reader.readLine();
-            if (input.charAt(0) == '.' || input.charAt(0) == '-' || input.charAt(0) == '/') {
-                String out = "";
-                while(input.length() > 0) {
-                    if (input.charAt(0) == ' ') input = input.substring(1);
-                    StringBuilder in = new StringBuilder();
-                    while (input.length() > 0 && input.charAt(0) != ' ') {
-                        in.append(input.charAt(0));
-                        input = input.substring(1);
-                    }
-                    out = out + morseToString(morseTree, in.toString());
-                }
-                System.out.println(out);
+        this.view = view;
+        setup();
+        if (input.length() >= 4) startConverter(input.substring(4));
+        else {
+            result.setText("!!!ERROR!!!! Layout error");
+            result.setColor(Color.red);
+        }
+        boolean wait = true;
+        while(wait) {
+            if(view.keyPressed('c')){
+                StringSelection stringSelection = new StringSelection(output);
+                Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+                clipboard.setContents(stringSelection, null);
+                title.setText("Morse Converter    0 to exit   result copyed!");
             }
-            else if(input.equals("exit")) run = false;
-            else System.out.println(stringToMorse(input));
+            if(view.keyPressed('0')) wait = false;
+            else view.wait(10);
+        }
+        end();
+    }
+
+    private void setup(){
+        view.setSize(600,150);
+        title = new Text(10,10,"Morse Converter    0 to exit c to copy result");
+        inputText = new Text(10,40, "Input: ");
+        result = new Text(10,70,"result");
+    }
+    private void startConverter(String pInput){
+        inputText.setText("Input: " + pInput);
+        String input = pInput;
+        if (input.charAt(0) == '.' || input.charAt(0) == '-' || input.charAt(0) == '/') {
+            BinaryTree<String> morseTree = fillTree();
+            StringBuilder out = new StringBuilder();
+            while(input.length() > 0) {
+                if (input.charAt(0) == ' ') input = input.substring(1);
+                StringBuilder in = new StringBuilder();
+                while (input.length() > 0 && input.charAt(0) != ' ') {
+                    in.append(input.charAt(0));
+                    input = input.substring(1);
+                }
+                out.append(morseToString(morseTree, in.toString()));
+            }
+            result.setText(out.toString());
+            output = out.toString();
+        }
+        else {
+            String out = stringToMorse(input);
+            result.setText(out);
+            output = out;
         }
     }
 
@@ -42,22 +73,25 @@ public class MorseConverter {
         if(morse.length() == 0) return morseTree.getContent();
         else{
             if(morse.charAt(0) == '.') return morseToString(morseTree.getLeftTree(), morse.substring(1));
-                else if(morse.charAt(0) == '-') return morseToString(morseTree.getRightTree(), morse.substring(1));
-                else if(morse.charAt(0) == '/') return " ";
-                else return "  !!ERROR!!  ";
+            else if(morse.charAt(0) == '-') return morseToString(morseTree.getRightTree(), morse.substring(1));
+            else if(morse.charAt(0) == '/') return " ";
+            else if(morse.charAt(0) == ' ') return morseToString(morseTree, morse.substring(1));
+            else {
+                return "  !!ERROR!!  ";
+            }
         }
     }
 
     private String stringToMorse(String input){
         String out = "";
         while (input.length() > 0) {
-            out += switchh(input);
+            out = out + switchFunction(input);
             input = input.substring(1);
         }
-        return out;
+        return out.substring(0,out.length() -1);
     }
     
-    private String switchh(String input){
+    private String switchFunction(String input){
         String out = "";
         switch ("" + input.toLowerCase(Locale.ROOT).charAt(0)) {
                 case "a" : return".- ";
@@ -105,7 +139,7 @@ public class MorseConverter {
             }
     }
 
-    private void fillTree(){
+    private BinaryTree<String> fillTree(){
         BinaryTree<String> treeRLLLL = new BinaryTree<>("6");
         treeRLLLL.setRightTree(new BinaryTree<>("-"));
         BinaryTree<String> treeLRLRL = new BinaryTree<>("+");
@@ -173,8 +207,16 @@ public class MorseConverter {
         treeR.setLeftTree(treeRL);
         treeR.setRightTree(treeRR);
 
-        morseTree = new BinaryTree<>("-");
-        morseTree.setLeftTree(treeL);
-        morseTree.setRightTree(treeR);
+        BinaryTree<String> tree = new BinaryTree<>("-");
+        tree.setLeftTree(treeL);
+        tree.setRightTree(treeR);
+        return tree;
+    }
+
+    private void end(){
+        view.remove(title);
+        view.remove(inputText);
+        view.remove(result);
+        view.setSize(0,0);
     }
 }

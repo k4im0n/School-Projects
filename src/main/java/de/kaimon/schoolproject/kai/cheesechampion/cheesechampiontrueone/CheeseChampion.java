@@ -10,27 +10,21 @@ import java.awt.*;
 
 public class CheeseChampion {
 
-    private View view = new View(620,420);
-    private Rectangle border = new Rectangle(0,0,620,420,Color.BLUE);
-    private Rectangle background  = new Rectangle(10,10,600,400, Color.BLACK);
+    private View view;
+    private Rectangle border;
+    private Rectangle background;
     private Polygon way;
     private int[] winPos = new int[2];
     private Queue<Mouse> start = new Queue<>();
     private Queue<Mouse> end = new Queue<>();
     private Stack<Mouse> center = new Stack<>();
+    private Queue<Mouse> remove = new Queue<>();
 
-    public CheeseChampion() {
+    public CheeseChampion(View view) {
+        this.view = view;
+        setup();
         winPos[0] = 400;
         winPos[1] = 235;
-        way = new Polygon(10,210, Color.WHITE);
-        way.add(-11,0);
-        way.add(-11,100);
-        way.add(621,100);
-        way.add(621,0);
-        way.add(450,0);
-        way.add(239,-211);
-        way.add(89,-211);
-        way.add(300,0);
 
         int mice = Tools.randomNumber(3,9);
         for (int i = 0; i < mice; i++) {
@@ -115,8 +109,37 @@ public class CheeseChampion {
         int i = 0;
         while (!end.isEmpty()) {
             end.front().getMaus().moveTo(20 + i,20);
+            remove.enqueue(end.front());
             end.dequeue();
             i = i + 80;
         }
+        view.wait(1000);
+        end();
+    }
+
+    private void setup(){
+        view.setSize(620,420);
+        border = new Rectangle(0,0,620,420,Color.BLUE);
+        background  = new Rectangle(10,10,600,400, Color.BLACK);
+        way = new Polygon(10,210, Color.WHITE);
+        way.add(-11,0);
+        way.add(-11,100);
+        way.add(621,100);
+        way.add(621,0);
+        way.add(450,0);
+        way.add(239,-211);
+        way.add(89,-211);
+        way.add(300,0);
+    }
+
+    private void end(){
+        view.remove(background);
+        view.remove(border);
+        view.remove(way);
+        while (!remove.isEmpty()){
+            view.remove(remove.front().getMaus());
+            remove.dequeue();
+        }
+        view.setSize(0,0);
     }
 }

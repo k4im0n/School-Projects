@@ -1,23 +1,50 @@
 package de.kaimon.schoolproject.kai.trees.treetraversionen;
 
 import de.kaimon.schoolproject.implementations.datenstrukturklassen.baum.BinaryTree;
+import sas.Text;
+import sas.View;
 
 public class Traversion {
+
+    View view;
+    Text tree;
+    Text tree1;
+    Text tree2;
+    Text tree3;
+    Text tree4;
+    Text lrwPOST;
+    Text wlrPRE;
+    Text lwrIN;
 
     private BinaryTree<Integer> nummberTree;
     private String post = "LRW: ";
     private String pre = "WLR: ";
     private String in = "LWR: ";
 
-    public Traversion(){
-        fillTree(new int[]{5, 13, 10, 18, 30, 20, 15, 36, 39, 38, 49, 55, 51, 47, 33});
+    public Traversion(View view, int[] input){
+        this.view = view;
+        setup();
+        fillTree(input);
         System.out.println("");
-        System.out.println(outputPostorderLRW(nummberTree) + " Postorder");
-        System.out.println(outputPreorderWLR(nummberTree) + " Preorder");
-        System.out.println(outputInorderLWR(nummberTree) + " Inorder");
-        new TreeViewGUI(nummberTree);
+        lrwPOST = new Text(10,160," Postorder " + outputPostorderLRW(nummberTree));
+        wlrPRE = new Text(10,190," Preorder " + outputPreorderWLR(nummberTree));
+        lwrIN = new Text(10,220," Inorder " + outputInorderLWR(nummberTree));
+        boolean wait = true;
+        while(wait) {
+            if(view.keyPressed('0')) wait = false;
+            else view.wait(10);
+        }
+        end();
     }
 
+    private void setup(){
+        view.setSize(430,260);
+        tree = new Text(10,10,"Binary Tree:          '0' to exit");
+        tree1 = new Text(10,40, "");
+        tree2 = new Text(10,70, "");
+        tree3 = new Text(10,100, "");
+        tree4 = new Text(10,130, "");
+    }
     private String outputPostorderLRW(BinaryTree<Integer> tree){
         if(tree.isEmpty()) return post;
         if(!tree.getLeftTree().isEmpty()) outputPostorderLRW(tree.getLeftTree());
@@ -79,27 +106,39 @@ public class Traversion {
             }
             nummberTree.setRightTree(treeR);
         }
-        /*
-        System.out.println(
-                "\t\t\t\t\t\t\t" +
+
+        tree1.setText(
+                "                                    " +
                 nummberTree.getContent());
-        System.out.println(
-                "\t\t\t"+
-                nummberTree.getLeftTree().getContent() +"\t\t\t\t\t\t\t\t" + nummberTree.getRightTree().getContent());
-        System.out.println("\t"+
-                nummberTree.getLeftTree().getLeftTree().getContent() +"\t\t\t\t"+
-                nummberTree.getLeftTree().getRightTree().getContent() +"\t\t\t\t"+
-                nummberTree.getRightTree().getLeftTree().getContent() +"\t\t\t\t" +
+        tree2.setText(
+                "                    "+
+                nummberTree.getLeftTree().getContent() +"                                " + nummberTree.getRightTree().getContent());
+        tree3.setText("          "+
+                nummberTree.getLeftTree().getLeftTree().getContent() +"                "+
+                nummberTree.getLeftTree().getRightTree().getContent() +"                "+
+                nummberTree.getRightTree().getLeftTree().getContent() +"                " +
                 nummberTree.getRightTree().getRightTree().getContent());
-        System.out.println(
-                nummberTree.getLeftTree().getLeftTree().getLeftTree().getContent() + "\t\t" +
-                nummberTree.getLeftTree().getLeftTree().getRightTree().getContent() + "\t\t" +
-                nummberTree.getLeftTree().getRightTree().getLeftTree().getContent() + "\t\t" +
-                nummberTree.getLeftTree().getRightTree().getRightTree().getContent() + "\t\t" +
-                nummberTree.getRightTree().getLeftTree().getLeftTree().getContent() + "\t\t" +
-                nummberTree.getRightTree().getLeftTree().getRightTree().getContent() + "\t\t" +
-                nummberTree.getRightTree().getRightTree().getLeftTree().getContent() + "\t\t" +
+        tree4.setText(
+                nummberTree.getLeftTree().getLeftTree().getLeftTree().getContent() + "        " +
+                nummberTree.getLeftTree().getLeftTree().getRightTree().getContent() + "        " +
+                nummberTree.getLeftTree().getRightTree().getLeftTree().getContent() + "        " +
+                nummberTree.getLeftTree().getRightTree().getRightTree().getContent() + "        " +
+                nummberTree.getRightTree().getLeftTree().getLeftTree().getContent() + "        " +
+                nummberTree.getRightTree().getLeftTree().getRightTree().getContent() + "        " +
+                nummberTree.getRightTree().getRightTree().getLeftTree().getContent() + "        " +
                 nummberTree.getRightTree().getRightTree().getRightTree().getContent());
-         */
+
+    }
+
+    private void end(){
+        view.remove(tree);
+        view.remove(tree1);
+        view.remove(tree2);
+        view.remove(tree3);
+        view.remove(tree4);
+        view.remove(lrwPOST);
+        view.remove(wlrPRE);
+        view.remove(lwrIN);
+        view.setSize(0,0);
     }
 }

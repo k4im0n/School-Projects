@@ -1,15 +1,30 @@
 package de.kaimon.schoolproject.kai.cheesechampion.cheesechampion;
 
 import de.kaimon.schoolproject.implementations.datenstrukturklassen.linear.Queue;
+import sas.Text;
 import sas.Tools;
+import sas.View;
 
 public class CheeseChampion {
 
     private Queue<Mouse> start = new Queue<>();
     private Queue<Mouse> end = new Queue<>();
     private Queue<Mouse> center = new Queue<>();
+    View view;
+    Text text;
 
-    public CheeseChampion() {
+    public CheeseChampion(View view) {
+        this.view = view;
+        setup();
+        run();
+        end();
+    }
+
+    void setup(){
+        view.setSize(200,40);
+        text = new Text(10,10, "");
+    }
+    void run(){
         int mice = Tools.randomNumber(3,9);
         for (int i = 0; i < mice; i++) {
             start.enqueue(new Mouse(i+1));
@@ -41,8 +56,13 @@ public class CheeseChampion {
         }
 
         while (!end.isEmpty()) {
-            System.out.println(end.front().getName() + " " + end.front().getStrenght());
+            text.setText(end.front().getName() + " " + end.front().getStrenght());
             end.dequeue();
         }
+    }
+
+    void end(){
+        view.remove(text);
+        view.setSize(0,0);
     }
 }
