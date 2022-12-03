@@ -19,7 +19,7 @@ public class MorseConverter {
 
         this.view = view;
         setup();
-        if (input.length() >= 4) startConverter(input.substring(4));
+        if (input.length() >= 1) startConverter(input);
         else {
             result.setText("!!!ERROR!!!! Layout error");
             result.setColor(Color.red);

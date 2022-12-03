@@ -27,10 +27,10 @@ public class FackUltet {
 
      private void run(String input){
          boolean wait = true;
-         if (input.length() >= 4) {
-             int n = Integer.parseInt(input.substring(4));
+         if (input.length() >= 1) {
+             int n = Integer.parseInt(input);
              for(int i = (int)n-1; i>0; i--)n = n * i;
-             result.setText("Fakultät von " + input.substring(4) + " beträgt: " + n);
+             result.setText("Fakultät von " + input + " beträgt: " + n);
              while(wait) {
                  if(view.keyPressed('0')) wait = false;
                  else view.wait(10);

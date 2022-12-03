@@ -1,5 +1,7 @@
 package de.kaimon.schoolproject.kai.trees.treetraversionen;
+import de.kaimon.schoolproject.implementations.datenstrukturklassen.baum.BinarySearchTree;
 import de.kaimon.schoolproject.implementations.datenstrukturklassen.baum.BinaryTree;
+import de.kaimon.schoolproject.kai.trees.binaryserchtree.politikerranking.Politician;
 
 import javax.swing.JFrame;
 import java.awt.event.MouseListener;
@@ -16,7 +18,7 @@ public class TreeViewGUI extends JFrame implements MouseListener
      *
      * @param baum der anzuzeigende Baum
      */
-    public TreeViewGUI(BinaryTree baum){
+    public TreeViewGUI(BinaryTree<Politician> baum){
         super("Baumanzeiger");
         setSize(1000, 500);
         sicht = new TreeView(1000, 500, baum);

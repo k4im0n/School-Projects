@@ -29,8 +29,8 @@ public class Fibonachi {
     }
 
     private void run(String input){
-        if (input.length() >= 4) {
-            int n = Integer.parseInt(input.substring(4));
+        if (input.length() >= 1) {
+            int n = Integer.parseInt(input);
             double first = 1;
             double second = 1;
             if(n>1) {

@@ -7,14 +7,14 @@ import sasio.Textfield;
 import java.awt.*;
 import java.io.IOException;
 
-public class TempSetup {
-
-    int vWidth = 220;
-    int vHeight = 530;
-
-    View view = new View(vWidth,vHeight);
+public class Setup {
 
     int width = 200;
+    int vWidth = width + 20;
+    int vHeight = 530;
+
+    View view = new View(vWidth,vHeight, "School Project Kai");
+
 
     Button slidePhysiksOnly =           new Button(10, 10, width,30, "slidePhysiksOnly", Color.GRAY);
     Button jumpPhysiksOnly =            new Button(10, 50, width,30,"jumpPhysiksOnly", Color.GRAY);
@@ -30,10 +30,10 @@ public class TempSetup {
     Button politikrRanking =            new Button(10,450, width,30,"politikrRanking", Color.GRAY);
     Button roomSort =                   new Button(10,490, width,30,"roomSort", Color.GRAY);
 
-    Textfield textIn = new Textfield(10,10,200,20,"", view);
-    Button button = new Button(10,40,200,20,"Submit", Color.GRAY);
+    Textfield textIn = new Textfield(10,10,200,40,"", view);
+    Button button = new Button(10,60,200,20,"Submit", Color.GRAY);
 
-    public TempSetup() throws IOException {
+    public Setup() throws IOException {
         textIn.setHidden(true);
         button.setHidden(true);
         boolean exit = true;
@@ -91,12 +91,12 @@ public class TempSetup {
             }
             else if(politikerBinarySearch.clicked()){
                 show(false);
-                new de.kaimon.schoolproject.kai.trees.binaryserchtree.politikerranking.Start();
+                new de.kaimon.schoolproject.kai.trees.binaryserchtree.politikerranking.Election(textinput(), view);
                 show(true);
             }
             else if(politikrRanking.clicked()){
                 show(false);
-                new de.kaimon.schoolproject.kai.trees.politikerranking.Start();
+                new de.kaimon.schoolproject.kai.trees.politikerranking.Election(textinput(),view);
                 show(true);
             }
             else if(roomSort.clicked()){
@@ -129,21 +129,20 @@ public class TempSetup {
     }
 
     private String textinput() throws IOException{
-        view.setSize(220,70);
+        view.setSize(220,90);
         textIn.setHidden(false);
+        textIn.deleteText();
         button.setHidden(false);
         textIn.setActivated(true);
-        boolean loll = true;
-        while (loll){
-            if(button.clicked()){
+        while (true){
+            if(button.clicked() || textIn.enterPressed()){
                 view.setSize(0,0);
                 textIn.setHidden(true);
+                textIn.setActivated(false);
                 button.setHidden(true);
-                loll = false;
                 return textIn.getText();
             }
             view.wait(10);
         }
-        return "";
     }
 }

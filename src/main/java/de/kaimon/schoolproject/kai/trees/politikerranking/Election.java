@@ -2,7 +2,9 @@ package de.kaimon.schoolproject.kai.trees.politikerranking;
 
 import de.kaimon.schoolproject.implementations.datenstrukturklassen.baum.BinaryTree;
 import de.kaimon.schoolproject.implementations.datenstrukturklassen.baum.TreeViewGUI;
+import sas.Text;
 import sas.Tools;
+import sas.View;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,7 +12,12 @@ import java.io.InputStreamReader;
 
 public class Election {
 
-    public Election(String sortBy) throws IOException {
+    View view;
+    Text text;
+
+    public Election(String sortBy, View view) throws IOException {
+        this.view = view;
+        setup();
         Politician politicians[] = new Politician[6];
         politicians[0] = new Politician(Tools.randomNumber(0,100), "Hallo");
         politicians[1] = new Politician(Tools.randomNumber(0,100), "LOL");
@@ -19,10 +26,12 @@ public class Election {
         politicians[4] = new Politician(Tools.randomNumber(0,100), "LAAAL");
         politicians[5] = new Politician(Tools.randomNumber(0,100), "SHEESH");
         new TreeViewGUI(sortAndCreateTree(politicians, sortBy));
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.print("press enter: ");
-        reader.readLine();
-
+        boolean exit = false;
+        while (!exit){
+            if(view.keyPressed('0')) exit = true;
+            view.wait(10);
+        }
+        end();
     }
 
     public BinaryTree<String> sortAndCreateTree(Politician[] politicians, String sortBy){
@@ -63,5 +72,15 @@ public class Election {
         if(first.length > 0) tree.setLeftTree(createSearchTree(first));
         if(second.length > 0) tree.setRightTree(createSearchTree(second));
         return tree;
+    }
+
+    private void setup(){
+        view.setSize(200,40);
+        text = new Text(10,10,"Press '0' to exit");
+    }
+
+    private void end(){
+        view.remove(text);
+        view.setSize(0,0);
     }
 }

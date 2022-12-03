@@ -2,12 +2,14 @@ package de.kaimon.schoolproject.kai.trees.binaryserchtree.politikerranking;
 
 import de.kaimon.schoolproject.implementations.datenstrukturklassen.baum.ComparableContent;
 
-public class PoliticianFame implements ComparableContent<PoliticianFame> {
+public class Politician implements ComparableContent<Politician> {
 
     private int fame;
     private String name;
+    private boolean sortByFame;
 
-    public PoliticianFame(int fame, String name){
+    public Politician(int fame, String name, boolean sortByFame){
+        this.sortByFame = sortByFame;
         this.name = name;
         this.fame = fame;
     }
@@ -21,20 +23,27 @@ public class PoliticianFame implements ComparableContent<PoliticianFame> {
     }
 
     @Override
-    public boolean isGreater(PoliticianFame pContent) {
-        if(pContent.getFame() < this.getFame()) return true;
+    public boolean isGreater(Politician pContent) {
+        if(sortByFame && pContent.getFame() < this.getFame()) return true;
+        else if(pContent.getName().compareTo(this.getName()) < 0) return true;
         return false;
     }
 
     @Override
-    public boolean isEqual(PoliticianFame pContent) {
-        if(pContent.getFame() == this.getFame()) return true;
+    public boolean isEqual(Politician pContent) {
+        if(sortByFame && pContent.getFame() == this.getFame()) return true;
+        else if(pContent.getName().compareTo(this.getName()) == 0) return true;
         return false;
     }
 
     @Override
-    public boolean isLess(PoliticianFame pContent) {
+    public boolean isLess(Politician pContent) {
         if(pContent.getFame() > this.getFame()) return true;
+        else if(sortByFame && pContent.getName().compareTo(this.getName()) > 0) return true;
         return false;
+    }
+
+    public String print(){
+        return getName() + ", Fame: " + getFame();
     }
 }
