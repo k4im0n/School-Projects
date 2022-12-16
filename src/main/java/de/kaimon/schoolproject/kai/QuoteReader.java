@@ -46,7 +46,7 @@ public class QuoteReader {
         LinkedList<String> quotes = new LinkedList<>();
         BufferedReader reader = new BufferedReader(new FileReader("src/main/java/de/kaimon/schoolproject/kai/Einfachezitate.txt"));
         reader.lines().forEach(s -> {
-            if(s.length() > 0 && s.charAt(0) == '"'){
+            if(s.length() > 0 && s.charAt(0) == '"' || s.length() > 0 && s.charAt(0) ==  '„'){
                 quotes.add(s.substring(1,s.length()-1));
                 quotesJson.add(s.substring(1,s.length()-1));
                 return;
