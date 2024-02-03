@@ -5,7 +5,6 @@ import sasio.Button;
 import sasio.Textfield;
 
 import java.awt.*;
-import java.io.IOException;
 
 public class Setup {
 
@@ -33,7 +32,7 @@ public class Setup {
     Textfield textIn = new Textfield(10,10,200,40,"", view);
     Button button = new Button(10,60,200,20,"Submit", Color.GRAY);
 
-    public Setup() throws IOException {
+    public Setup(){
         textIn.setHidden(true);
         button.setHidden(true);
         boolean exit = true;
@@ -128,7 +127,7 @@ public class Setup {
         if(show) view.setSize(vWidth,vHeight);
     }
 
-    private String textinput() throws IOException{
+    private String textinput(){
         view.setSize(220,90);
         textIn.setHidden(false);
         textIn.deleteText();

@@ -15,7 +15,7 @@ public class Election {
     View view;
     Text text;
 
-    public Election(String sortBy, View view) throws IOException {
+    public Election(String sortBy, View view){
         this.view = view;
         setup();
         if(sortBy.equals("name")){

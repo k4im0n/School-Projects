@@ -2,7 +2,6 @@ package de.kaimon.schoolproject.simon;
 
 import de.kaimon.schoolproject.simon.globalutils.Color;
 import de.kaimon.schoolproject.simon.politiciantree.CompareType;
-import de.kaimon.schoolproject.simon.politiciantree.Politician;
 import de.kaimon.schoolproject.simon.politiciantree.PoliticianTrees;
 
 import java.util.Scanner;

@@ -12,7 +12,7 @@ public class FackUltet {
     View view;
     Text backHint;
     Text result;
-     public FackUltet(String input, View view) throws IOException {
+     public FackUltet(String input, View view){
          this.view = view;
          setup();
          run(input);
