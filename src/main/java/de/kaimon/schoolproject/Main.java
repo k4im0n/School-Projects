@@ -3,8 +3,8 @@ package de.kaimon.schoolproject;
 import de.kaimon.schoolproject.kai.SchoolProjectKai;
 import de.kaimon.schoolproject.simon.SchoolProjectSimon;
 
+import java.io.IOException;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
