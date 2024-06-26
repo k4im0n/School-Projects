@@ -15,16 +15,14 @@ public class Main {
             System.out.println("--- School Projects of Simon AKA Asedem and Kai AKA kaigoe ---\n");
             firstStart = !firstStart;
         }
-        String arg = args.length > 1 ? args[0] : "";
+        String arg = args.length == 1 ? args[0] : "";
         try {
-            if(!arg.equals("")){
-                switch (arg){
-                    case "kai", "k" -> SchoolProjectKai.main(cutFirstOf(args));
-                    case "simon", "s" -> SchoolProjectSimon.main(cutFirstOf(args));
-                    default -> throw new IllegalArgumentException();
-                }
-                return;
+            switch (arg){
+                case "kai", "k" -> SchoolProjectKai.main(cutFirstOf(args));
+                case "simon", "s" -> SchoolProjectSimon.main(cutFirstOf(args));
+                default -> throw new IllegalArgumentException();
             }
+            return;
         } catch (IllegalArgumentException e){
             System.out.println("No Valid Input!");
         }
